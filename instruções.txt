@@ -1,0 +1,27 @@
+
+
+SISTEMA DE VERSIONAMENTO
+
+Links para Downloads:
+
+TortoiseGIT:
+http://code.google.com/p/tortoisegit/wiki/Download
+
+GIT:
+http://git-scm.com/downloads
+
+
+1 - Como instalar o GIT
+2 - Ferramentas que ajudam a usar o GIT
+3 - Como usar o tortoisegit
+
+PROJETO
+
+1 - Como baixar o projeto com GIT
+2 - Como abrir o projeto no eclipse
+
+MÃO A OBRA
+
+Link do projeto: https://github.com/rafaelbrunoti
+Usuário: rafaelbrunoti
+Senha: asdf1234
