@@ -32,22 +32,22 @@ public class GameController {
 		return gameBean;
 	}
     
-	/*public void save(){
+	public void save(){
 		
 		GameModel gameModel = new GameModel();
 		GameBean gameBean = new GameBean();
-    	//gameBean.setGame_id(request.getParameter("game_id"));
+    	gameBean.setGame_id(Integer.parseInt(request.getParameter("game_id")));
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	//gameBean.setGame_data(request.getParameter("game_data"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
-    	//gameBean.setGen_id(request.getParameter("gen_id"));
-    	//gameBean.setMid_id(request.getParameter("mid_id"));
-    	//gameBean.setPla_id(request.getParameter("pla_id"));
+    	gameBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
+    	gameBean.setMid_id(Integer.parseInt(request.getParameter("mid_id")));
+    	gameBean.setPla_id(Integer.parseInt(request.getParameter("pla_id")));
 		
 		gameModel.insert(gameBean);
-		//System.out.println(request.getParameter("nome"));
-	}*/
+		System.out.println(request.getParameter("game_nome"));
+	}
 	
 	public List<GameBean> gameLista(){
 		return gameModel.select("");

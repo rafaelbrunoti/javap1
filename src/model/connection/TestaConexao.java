@@ -30,12 +30,12 @@ public class TestaConexao {
 		//controller.list();
 		
 		
-		try{
+		/*try{
 			System.out.println("Conexao Aberta! " + odbcConnection.connect());
 			
 		}catch(Exception e){
 			System.out.println(e);
-		}
+		}*/
 	}
 
 }
