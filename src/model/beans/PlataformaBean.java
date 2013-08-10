@@ -1,4 +1,4 @@
-package models.beans;
+package model.beans;
 
 public class PlataformaBean {
 	

@@ -1,4 +1,4 @@
-package models.beans;
+package model.beans;
 
 import java.util.Date;
 
@@ -9,6 +9,9 @@ public class GameBean {
 	private Date game_data;
 	private String game_descricao;
 	private String game_capa;
+	private Integer gen_id;
+	private Integer pla_id;
+	private Integer mid_id;	
 	
 	
 	public Integer getGame_id() {
@@ -40,6 +43,24 @@ public class GameBean {
 	}
 	public void setGame_capa(String game_capa) {
 		this.game_capa = game_capa;
+	}
+	public Integer getGen_id() {
+		return gen_id;
+	}
+	public void setGen_id(Integer gen_id) {
+		this.gen_id = gen_id;
+	}
+	public Integer getPla_id() {
+		return pla_id;
+	}
+	public void setPla_id(Integer pla_id) {
+		this.pla_id = pla_id;
+	}
+	public Integer getMid_id() {
+		return mid_id;
+	}
+	public void setMid_id(Integer mid_id) {
+		this.mid_id = mid_id;
 	}
 	
 }
