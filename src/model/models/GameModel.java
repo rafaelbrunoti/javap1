@@ -20,6 +20,33 @@ public class GameModel {
 		odbcConnection = new ODBCConnection();
 	}
 	
+	public GameModel insert(GameBean gameBean){
+		
+		sql = "insert into game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES ("
+				     +"'"+gameBean.getGame_nome()+"',"
+				     +"'"+gameBean.getGame_data()+"',"
+				     +"'"+gameBean.getGame_descricao()+"',"
+				     +"'"+gameBean.getGame_capa()+"',"
+				     +"'"+gameBean.getGen_id()+"',"
+				     +"'"+gameBean.getPla_id()+"',"
+				     +"'"+gameBean.getMid_id()+"')";
+		
+		try{		
+			
+			stmt = odbcConnection.connect().prepareStatement(sql);
+			stmt.execute();
+			stmt.close();
+			
+		}catch(SQLException E){
+			System.out.println(E.getMessage());
+		}
+
+		
+		System.out.println(sql);
+		
+		return gameModel;
+		
+	}
 	public List<GameBean>  select(String sql){
         try{
             List<GameBean> gameLista = new ArrayList<GameBean>();
