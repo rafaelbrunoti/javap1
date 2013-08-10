@@ -25,8 +25,10 @@ public class TestaConexao {
 		 
 		//controller.request = request;
 		//controller.response = response;
-		
-		//controller.save();
+		GameBean gameBean = new GameBean();
+
+		 
+		 controller.save();
 		//controller.list();
 		
 		
