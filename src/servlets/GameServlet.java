@@ -22,9 +22,7 @@ public class GameServlet extends HttpServlet {
     	
     	ExampleController control = new ExampleController();
     	
-    	control.request = req;
-    	control.response = resp;
-    	control.save();
+    	
     	
     	
     	
