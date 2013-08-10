@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controllers.ExampleController;
+
 
 @WebServlet("/GameServlet")
 public class GameServlet extends HttpServlet {
@@ -17,6 +19,15 @@ public class GameServlet extends HttpServlet {
     }
     
     protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	
+    	ExampleController control = new ExampleController();
+    	
+    	control.request = req;
+    	control.response = resp;
+    	control.save();
+    	
+    	
+    	
     	
     }
 
