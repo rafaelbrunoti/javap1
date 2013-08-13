@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import model.beans.GameBean;
 
 import controllers.GameController;
@@ -34,21 +35,25 @@ public class GameServlet extends HttpServlet {
     	GameBean gameBean = gameController.mostraDados();
     	gameController.save();
     	
-    	out.println("Nome do Game: " + gameBean.getGame_nome());
-		out.println("Data do Game: " + gameBean.getGame_data());
-		out.println("Descricao do Game: " + gameBean.getGame_descricao());
-		out.println("Capa do Game: " + gameBean.getGame_capa());
-		out.println("Data do Game: " + gameBean.getGen_id());
-		out.println("ID da Plataforma do Game: " + gameBean.getPla_id());
-		out.println("ID da Midia do Game: " + gameBean.getMid_id());
+    	out.println("Nome do Game : " + gameBean.getGame_nome());
+		out.println("Data do Game : " + gameBean.getGame_data());
+		out.println("Descricao do Game : " + gameBean.getGame_descricao());
+		out.println("Capa do Game : " + gameBean.getGame_capa());
+		out.println("Data do Game : " + gameBean.getGen_id());
+		out.println("ID da Plataforma do Game : " + gameBean.getPla_id());
+		out.println("ID da Midia do Game : " + gameBean.getMid_id());
     	
 		try{
 			
     		GameController gmController = new GameController();
 			gmController.gameLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/listaGames.jsp");
+					.getRequestDispatcher("/listaGame.jsp");
 			rd.forward(request, response);
+			
+			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
+			response.sendRedirect(request.getContextPath() + "/listaGame.jsp");
+			
 		}
 		catch(Exception e){
 			System.out.println(e.getMessage());
