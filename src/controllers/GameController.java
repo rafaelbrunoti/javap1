@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,11 +21,21 @@ public class GameController {
 		gameModel = new GameModel();
 	}
 	
-	public GameBean mostraDados(){
+	public GameBean mostraDados() throws Exception{
 		GameBean gameBean = new GameBean();
     	gameBean.setGame_id(Integer.parseInt(request.getParameter("game_id")));
     	gameBean.setGame_nome(request.getParameter("game_nome"));
-    	//gameBean.setGame_data(Date.parse(request.getParameter("game_data")));
+    	
+    	//Conversão de texto para Data
+    	String dataEmTexto = request.getParameter("game_data");
+		Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		
+		Calendar dataLancamento = Calendar.getInstance();
+		dataLancamento.setTime(data);
+   	
+    	gameBean.setGame_data(dataLancamento);
+    	//
+    	
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
     	gameBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
@@ -32,13 +45,23 @@ public class GameController {
 		return gameBean;
 	}
     
-	public void save(){
+	public void save() throws Exception{
 		
 		GameModel gameModel = new GameModel();
 		GameBean gameBean = new GameBean();
     	gameBean.setGame_id(Integer.parseInt(request.getParameter("game_id")));
     	gameBean.setGame_nome(request.getParameter("game_nome"));
-    	//gameBean.setGame_data(request.getParameter("game_data"));
+
+    	//Conversão de texto para Data
+    	String dataEmTexto = request.getParameter("game_data");
+		Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		
+		Calendar dataLancamento = Calendar.getInstance();
+		dataLancamento.setTime(data);
+   	
+    	gameBean.setGame_data(dataLancamento);
+    	//
+    	
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
     	gameBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));

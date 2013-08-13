@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ public class GameServlet extends HttpServlet {
         super();
     }
     
-    protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void execute (HttpServletRequest request, HttpServletResponse response) throws Exception {
     	
     	GameController gameController = new GameController();
     	
@@ -47,12 +48,20 @@ public class GameServlet extends HttpServlet {
  
 
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.execute(request, response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			this.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.execute(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response){
+		try {
+			this.execute(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
