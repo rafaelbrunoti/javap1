@@ -1,5 +1,6 @@
 package model.models;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -83,5 +84,36 @@ public class GameModel {
         }
     }
 	
+	public void altera(GameBean gameBean){
+	      
+        String sql = "update game set game_nome=?, game_data=?, game_descricao=?, gen_id=?, pla_id=?, mid_id=? where game_id=?";
+        try {
+            PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
+            stmt.setString(1, gameBean.getGame_nome());
+            stmt.setDate(2, gameBean.getGame_data());
+            stmt.setString(3, gameBean.getGame_descricao());
+            stmt.setInt(4, gameBean.getGen_id());
+            stmt.setInt(5, gameBean.getMid_id());
+            stmt.setInt(6, gameBean.getPla_id());
+            stmt.execute();
+            stmt.close();
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+	
+	public void remove(GameBean gameBean){
+        String sql = "delete from game where game_id =?";
+        try {
+            PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
+            stmt.setInt(1, gameBean.getGame_id());
+            stmt.execute();
+            stmt.close();
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
