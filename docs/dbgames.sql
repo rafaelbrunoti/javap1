@@ -54,7 +54,7 @@ CREATE  TABLE IF NOT EXISTS `dbgames`.`game` (
   `game_nome` VARCHAR(50) NOT NULL ,
   `game_data` DATETIME NOT NULL ,
   `game_descricao` VARCHAR(100) NULL ,
-  `game_capa` LONGBLOB NULL ,
+  `game_capa` VARCHAR(255) NULL ,
   `gen_id` INT NULL ,
   `pla_id` INT NULL ,
   `mid_id` INT NULL ,

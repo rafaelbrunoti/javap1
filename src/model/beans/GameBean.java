@@ -1,12 +1,13 @@
 package model.beans;
 
 import java.sql.Date;
+import java.util.Calendar;
 
 public class GameBean {
 	
 	private Integer game_id;
 	private String game_nome;
-	private Date game_data;
+	private Calendar game_data;
 	private String game_descricao;
 	private String game_capa;
 	private Integer gen_id;
@@ -26,10 +27,10 @@ public class GameBean {
 	public void setGame_nome(String game_nome) {
 		this.game_nome = game_nome;
 	}
-	public Date getGame_data() {
+	public Calendar getGame_data() {
 		return game_data;
 	}
-	public void setGame_data(Date game_data) {
+	public void setGame_data(Calendar game_data) {
 		this.game_data = game_data;
 	}
 	public String getGame_descricao() {

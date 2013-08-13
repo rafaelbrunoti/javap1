@@ -1,16 +1,12 @@
 package model.connection;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 import controllers.GameController;
 import model.beans.GameBean;
 import model.connection.ODBCConnection;
 
 public class TestaConexao {
 
-	public static void main(String[]args){
+	public static void main(String[]args) throws Exception{
 		ODBCConnection odbcConnection = new ODBCConnection();
 		
 		GameController controller = new GameController();
@@ -25,7 +21,7 @@ public class TestaConexao {
 		 
 		//controller.request = request;
 		//controller.response = response;
-		GameBean gameBean = new GameBean();
+		//GameBean gameBean = new GameBean();
 
 		 
 		 controller.save();

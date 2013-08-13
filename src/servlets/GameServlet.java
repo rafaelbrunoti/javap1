@@ -42,7 +42,8 @@ public class GameServlet extends HttpServlet {
 		out.println("ID da Plataforma do Game: " + gameBean.getPla_id());
 		out.println("ID da Midia do Game: " + gameBean.getMid_id());
     	
-    	try{
+		try{
+			
     		GameController gmController = new GameController();
 			gmController.gameLista();
 			RequestDispatcher rd = request
@@ -54,9 +55,6 @@ public class GameServlet extends HttpServlet {
 		}
 	}
     	
-    	
- 
-
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.execute(request, response);

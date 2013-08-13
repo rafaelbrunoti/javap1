@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import model.beans.GameBean;
@@ -66,7 +67,11 @@ public class GameModel {
 
             	gameBean.setGame_id(rs.getInt("game_id"));
             	gameBean.setGame_nome(rs.getString("game_nome"));
-            	gameBean.setGame_data(rs.getDate("game_data"));
+            	
+                Calendar data = Calendar.getInstance();
+                data.setTime(rs.getDate("game_data"));         	           	
+            	gameBean.setGame_data(data);
+            	           
             	gameBean.setGame_descricao(rs.getString("game_descricao"));
             	gameBean.setGame_capa(rs.getString("game_capa"));
             	gameBean.setGen_id(rs.getInt("gen_id"));
@@ -90,7 +95,7 @@ public class GameModel {
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setString(1, gameBean.getGame_nome());
-            stmt.setDate(2, gameBean.getGame_data());
+            stmt.setDate(2, new Date(gameBean.getGame_data().getTimeInMillis()));
             stmt.setString(3, gameBean.getGame_descricao());
             stmt.setInt(4, gameBean.getGen_id());
             stmt.setInt(5, gameBean.getMid_id());
