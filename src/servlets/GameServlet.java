@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,18 +25,28 @@ public class GameServlet extends HttpServlet {
     
     protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
+    	PrintWriter out = response.getWriter();
+    	
     	GameController gameController = new GameController();
     	
     	gameController.request = request;
     	gameController.response = response;
     	GameBean gameBean = gameController.mostraDados();
-    	//gameController.save();
+    	gameController.save();
+    	
+    	out.println("Nome do Game: " + gameBean.getGame_nome());
+		out.println("Data do Game: " + gameBean.getGame_data());
+		out.println("Descricao do Game: " + gameBean.getGame_descricao());
+		out.println("Capa do Game: " + gameBean.getGame_capa());
+		out.println("Data do Game: " + gameBean.getGen_id());
+		out.println("ID da Plataforma do Game: " + gameBean.getPla_id());
+		out.println("ID da Midia do Game: " + gameBean.getMid_id());
     	
     	try{
     		GameController gmController = new GameController();
-			//gmController.list();
+			gmController.gameLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/pessoa/pessoa.jsp");
+					.getRequestDispatcher("/listaGames.jsp");
 			rd.forward(request, response);
 		}
 		catch(Exception e){
