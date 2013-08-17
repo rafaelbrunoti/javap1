@@ -32,10 +32,10 @@
 		
 		
 		<!-- input type="hidden" name="logica" value="AddUpdateContatoLogic" /--> 
-		<div align="left"></div><input type="submit" value="Enviar" class="btn btn-large btn-primary"/> <a
-			href="lista-contato.jsp"></div>
-			 
-		<div align="right"><input type="button" value="Voltar"	class="btn btn-large btn-primary" /></div>
-		</a>
+		<div style=" float: left;"><input type="submit" value="Enviar" class="btn btn-large btn-primary"/></div> 
+		
+		<div align="right">
+			<a href="../../views/index.jsp"><input type="button" value="Voltar"	class="btn btn-large btn-primary" /></a>
+		</div>
 	</form>
 </div>
