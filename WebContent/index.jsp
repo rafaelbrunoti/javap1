@@ -12,7 +12,7 @@
 <body>
 	<div class="container">
 		<div class="masthead">
-			<h3 class="muted">Project name</h3>
+			<h3 class="muted">Gerenciamento de Games	</h3>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
