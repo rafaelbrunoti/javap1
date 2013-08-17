@@ -15,32 +15,31 @@
 			<h3 class="muted">Projeto Java</h3>
 			<div class="navbar">
 				<div class="navbar-inner">
-					<div class="container">
+					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="dropdown"><a href="?view=inicio">Início</a>
+							<li><a href="?view=inicio">Início</a>
+							<li class="dropdown"><a data-toggle="dropdown"
+								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="nav-header">Pesquisar</li>
-									<li class="nav-header">Cadastrar</li>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="#">Midias</a>
+									<li class="nav-header">Mídias</li>
+									<li><a href="#">Pesquisar</a></li>
+									<li><a href="#">Cadastrar</a></li>
+								</ul></li>
+							<li class="dropdown"><a data-toggle="dropdown"
+								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="nav-header">Pesquisar</li>
-									<li class="nav-header">Cadastrar</li>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="#">Plataforma</a>
-								<ul class="dropdown-menu">
-									<li class="nav-header">Pesquisar</li>
-									<li class="nav-header">Cadastrar</li>
+									<li class="nav-header">Plataforma</li>
+									<li><a href="#">Pesquisar</a></li>
+									<li><a href="#">Cadastrar</a></li>
 								</ul>
 							<li>
-							<li class="dropdown"><a href="#">Gênero</a>
+							<li class="dropdown"><a data-toggle="dropdown"
+								class="dropdown-toggle" href="#">Gênero<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="nav-header">Pesquisar</li>
-									<li class="nav-header">Cadastrar</li>								
-								</ul>
-							</li>
+									<li class="nav-header">Gênero</li>
+									<li><a href="#">Pesquisar</a></li>
+									<li><a href="#">Cadastrar</a></li>
+								</ul></li>
 						</ul>
 					</div>
 				</div>
@@ -60,7 +59,8 @@
 			<p>&copy; Company 2013</p>
 		</div>
 	</div>
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/dropdown-bootstrap.js"></script>
 </body>
 </html>
