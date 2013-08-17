@@ -37,14 +37,14 @@ public class ViewController {
 	public void setArrayPages() {
 
 		this.pages.add("/views/index");
-		this.pages.add("/games/lista");
-		this.pages.add("/games/cadastro");
-		this.pages.add("/generos/lista");
-		this.pages.add("/generos/cadastro");
-		this.pages.add("/plataformas/lista");
-		this.pages.add("/plataformas/cadastro");
-		this.pages.add("/midias/lista");
-		this.pages.add("/midias/cadastro");
+		this.pages.add("/game/lista");
+		this.pages.add("/game/cadastro");
+		this.pages.add("/genero/lista");
+		this.pages.add("/genero/cadastro");
+		this.pages.add("/plataforma/lista");
+		this.pages.add("/plataforma/cadastro");
+		this.pages.add("/midia/lista");
+		this.pages.add("/midia/cadastro");
 
 	}
 

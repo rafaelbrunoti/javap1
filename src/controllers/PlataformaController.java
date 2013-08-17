@@ -23,6 +23,7 @@ public class PlataformaController {
 		
 		plataformaBean.setPla_id(Integer.parseInt(request.getParameter("pla_id")));
 		plataformaBean.setPla_nome(request.getParameter("pla_nome"));
+		plataformaBean.setPla_descricao(request.getParameter("pla_descricao"));
     	
 		return plataformaBean;
 	}
@@ -34,6 +35,7 @@ public class PlataformaController {
 		
 		plataformaBean.setPla_id(Integer.parseInt(request.getParameter("pla_id")));
 		plataformaBean.setPla_nome(request.getParameter("pla_nome"));
+		plataformaBean.setPla_descricao(request.getParameter("pla_descricao"));
 				
 		plataformaModel.insert(plataformaBean);
 		System.out.println(request.getParameter("game_nome"));
