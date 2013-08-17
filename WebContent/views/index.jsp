@@ -17,11 +17,30 @@
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li class="active"><a href="?view=inicio">Início</a></li>
-							<li><a href="#">Games</a></li>
-							<li><a href="#">Midias</a></li>
-							<li><a href="#">Plataforma</a></li>
-							<li><a href="#">Gênero</a></li>
+							<li class="dropdown"><a href="?view=inicio">Início</a>
+								<ul class="dropdown-menu">
+									<li class="nav-header">Pesquisar</li>
+									<li class="nav-header">Cadastrar</li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#">Midias</a>
+								<ul class="dropdown-menu">
+									<li class="nav-header">Pesquisar</li>
+									<li class="nav-header">Cadastrar</li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#">Plataforma</a>
+								<ul class="dropdown-menu">
+									<li class="nav-header">Pesquisar</li>
+									<li class="nav-header">Cadastrar</li>
+								</ul>
+							<li>
+							<li class="dropdown"><a href="#">Gênero</a>
+								<ul class="dropdown-menu">
+									<li class="nav-header">Pesquisar</li>
+									<li class="nav-header">Cadastrar</li>								
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
