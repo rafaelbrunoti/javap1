@@ -38,7 +38,7 @@ public class ViewController {
 
 		this.pages.add("index");
 		this.pages.add("inicio");
-		this.pages.add("indexgames");
+		this.pages.add("/game/cadastro");
 
 	}
 

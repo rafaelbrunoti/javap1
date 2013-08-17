@@ -12,13 +12,13 @@
 <body>
 	<div class="container">
 		<div class="masthead">
-			<h3 class="muted">Project name</h3>
+			<h3 class="muted">Nome do Projeto</h3>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
 							<li class="active"><a href="?view=inicio">Início</a></li>
-							<li><a href="#">Projects</a></li>
+							<li><a href="#">Game</a></li>
 							<li><a href="#">Services</a></li>
 							<li><a href="#">Downloads</a></li>
 							<li><a href="#">About</a></li>
