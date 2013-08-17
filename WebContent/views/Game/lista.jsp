@@ -27,14 +27,17 @@
 			</tr>
 		</thead>
 		<tbody>
+		<jsp:useBean id="listaGame" class="controllers.GameController"></jsp:useBean>
+		<c:forEach var="listas" items="${listaGame.gameLista()}">
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>${listas.getGame_id()}</td>
+				<td>${listas.getGame_Nome()}</td>
+				<td>${listas.getGame_data()}</td>
+				<td>${listas.getGame_descricao}</td>
+				<td>${listas.getGame_capa()}</td>
 				<td></td>
 			</tr>
+		</c:forEach>	
 		</tbody>
 	</table>
 <f:view>

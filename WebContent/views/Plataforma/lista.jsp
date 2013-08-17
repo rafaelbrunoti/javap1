@@ -25,12 +25,15 @@
 			</tr>
 		</thead>
 		<tbody>
+		<jsp:useBean id="listaPlataforma" class="controllers.PlataformaController"></jsp:useBean>
+		<c:forEach var="listas" items="${listaPlataforma.plataformaLista()}">
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>${listas.getPla_id()}</td>
+				<td>${listas.getPla_nome()}</td>
+				<td>${listas.getPla_descricao()}</td>
 				<td></td>
 			</tr>
+		</c:forEach>	
 		</tbody>
 	</table>
 <f:view>

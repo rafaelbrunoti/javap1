@@ -25,12 +25,15 @@
 			</tr>
 		</thead>
 		<tbody>
+		<jsp:useBean id="listaGenero" class="controllers.GeneroController"></jsp:useBean>
+		<c:forEach var="listas" items="${listaGenero.generoLista()}">
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>${listas.getGen_id()}</td>
+				<td>${listas.getGen_nome()}</td>
+				<td>${listas.setGen_descricao()}</td>
 				<td></td>
 			</tr>
+		</c:forEach>
 		</tbody>
 	</table>
 

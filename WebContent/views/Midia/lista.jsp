@@ -24,11 +24,14 @@
 			</tr>
 		</thead>
 		<tbody>
+		<jsp:useBean id="listaMidia" class="controllers.MidiaController"></jsp:useBean>
+		<c:forEach var="listas" items="${listaMidia.midiaLista()}">
 			<tr>
-				<td></td>
-				<td></td>
+				<td>${listas.getMid_id()}</td>
+				<td>${listas.getMid_nome()}</td>
 				<td></td>
 			</tr>
+		</c:forEach>	
 		</tbody>
 	</table>
 
