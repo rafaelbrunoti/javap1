@@ -4,25 +4,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="assets/css/bootstrap.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css" />
+<title>Projeto Java</title>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 	<div class="container">
 		<div class="masthead">
-			<h3 class="muted">Nome do Projeto</h3>
+			<h3 class="muted">Projeto Java</h3>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
 							<li class="active"><a href="?view=inicio">Início</a></li>
-							<li><a href="#">Game</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Downloads</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#">Games</a></li>
+							<li><a href="#">Midias</a></li>
+							<li><a href="#">Plataforma</a></li>
+							<li><a href="#">Gênero</a></li>
 						</ul>
 					</div>
 				</div>
