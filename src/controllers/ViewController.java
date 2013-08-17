@@ -17,7 +17,7 @@ public class ViewController {
 		if (this.view == null || this.view == "" || this.view.isEmpty()) {
 			
 			System.out.print("Nenhum parametro de pagina encontrado, setando pagina padrão | ");
-			this.setView("inicio.jsp");
+			this.setView("/views/index.jsp");
 			
 		} else {
 			if (this.verifyPage(this.view)) {
@@ -36,9 +36,15 @@ public class ViewController {
 
 	public void setArrayPages() {
 
-		this.pages.add("index");
-		this.pages.add("inicio");
-		this.pages.add("/game/cadastro");
+		this.pages.add("/views/index");
+		this.pages.add("/games/lista");
+		this.pages.add("/games/cadastro");
+		this.pages.add("/generos/lista");
+		this.pages.add("/generos/cadastro");
+		this.pages.add("/plataformas/lista");
+		this.pages.add("/plataformas/cadastro");
+		this.pages.add("/midias/lista");
+		this.pages.add("/midias/cadastro");
 
 	}
 
