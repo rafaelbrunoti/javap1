@@ -11,11 +11,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>Gerenciamento da Game</title>
 </head>
 <body>
-<f:view>
+	<legend>Lista de Midias</legend>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome da Midia</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 
+<f:view>
 </f:view>
 </body>
 </html>

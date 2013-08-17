@@ -11,9 +11,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>Gerenciamento do Game</title>
 </head>
 <body>
+<legend>Lista de Games</legend>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome do Game</th>
+				<th>Data do Game</th>
+				<th>Descrição do Game</th>
+				<th>Capa do Game</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 <f:view>
 
 </f:view>
