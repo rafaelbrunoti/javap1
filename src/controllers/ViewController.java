@@ -17,7 +17,7 @@ public class ViewController {
 		if (this.view == null || this.view == "" || this.view.isEmpty()) {
 			
 			System.out.print("Nenhum parametro de pagina encontrado, setando pagina padrão | ");
-			this.setView("/views/index.jsp");
+			this.setView("/views/game/lista.jsp");
 			
 		} else {
 			if (this.verifyPage(this.view)) {
@@ -36,7 +36,6 @@ public class ViewController {
 
 	public void setArrayPages() {
 
-		this.pages.add("/views/index");
 		this.pages.add("/game/lista");
 		this.pages.add("/game/cadastro");
 		this.pages.add("/genero/lista");
