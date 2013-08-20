@@ -48,11 +48,11 @@ public class GameServlet extends HttpServlet {
     		GameController gmController = new GameController();
 			gmController.gameLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/listaGame.jsp");
+					.getRequestDispatcher("/lista.jsp");
 			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/listaGame.jsp");
+			response.sendRedirect(request.getContextPath() + "/lista.jsp");
 			
 		}
 		catch(Exception e){

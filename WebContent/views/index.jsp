@@ -17,7 +17,7 @@
 				<div class="navbar-inner">
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li><a href="?view=inicio">Início</a>
+							<li><a href="?view=game/lista">Início</a>
 							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
