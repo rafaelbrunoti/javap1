@@ -1,0 +1,67 @@
+/* ==========================================================================
+   CSS personalizado
+   ========================================================================== */
+
+body {
+	padding-top: 30px;
+    padding-bottom: 40px;
+}
+p{
+	text-align:justify;
+}
+.hero{
+	width:auto;
+	background-image:url(../img/header.jpg);
+}
+.hero-unit h1{
+	margin-top:0;
+	padding-top:0;
+	color:#000000;
+	text-shadow:1px 1px 2px #ffffff;
+}
+.hero-unit p{
+	text-align:justify;
+	color:#000000;
+	text-shadow:1px 1px 2px #ffffff;
+}
+.submenu{
+	width:auto;
+	height:50px;
+	background-color:#eeeeee;
+}
+.submenu p{
+	text-align:center;
+}
+.rodape{
+	width:auto;
+	position: absolute;
+	bottom: 0;
+}
+.footer h4{
+	margin:0 0 10px 0px;
+	text-shadow:1px 1px 2px #FFFFFF;
+}
+.footer ul{
+	/*margin-left:10px;*/
+	margin:0;
+}
+.footer ul li{
+	border-bottom:1px dotted #000000;
+	margin:0;
+	list-style:none;
+}
+.footer cite{
+	text-align:justify;
+}
+.copyright{
+	width:auto;
+	height:50px;
+	background:#5f6b7a;
+}
+.copyright footer{
+	width:200px;
+	margin:0 auto;
+}
+.copyright footer p{
+	margin-top:20px;
+}
