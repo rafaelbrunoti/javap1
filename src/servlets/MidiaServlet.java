@@ -41,11 +41,11 @@ public class MidiaServlet extends HttpServlet {
     		MidiaController mdController = new MidiaController();
 			mdController.midiaLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/listaMidia.jsp");
+					.getRequestDispatcher("/views/midia/listamidia.jsp");
 			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/listaMidia.jsp");
+			response.sendRedirect(request.getContextPath() + "/views/midia/listamidia.jsp");
 			
 		}
 		catch(Exception e){

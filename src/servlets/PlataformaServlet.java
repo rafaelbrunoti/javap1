@@ -42,11 +42,11 @@ public class PlataformaServlet extends HttpServlet {
     		PlataformaController plaController = new PlataformaController();
 			plaController.plataformaLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/listaPlataforma.jsp");
+					.getRequestDispatcher("/views/plataforma/listaplataforma.jsp");
 			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/listaPlataforma.jsp");
+			response.sendRedirect(request.getContextPath() + "/views/plataforma/listaplataforma.jsp");
 			
 		}
 		catch(Exception e){

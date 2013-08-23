@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" version="2.0">
     <jsp:directive.page language="java"
         contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
@@ -37,9 +39,6 @@
 		</tbody>
 	</table>
 
-<f:view>
-
-</f:view>
 </body>
 </html>
 </jsp:root>

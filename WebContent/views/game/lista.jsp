@@ -10,15 +10,15 @@
 <title>Listagem de Games</title>
 
 	<title>Drop Down Navbar</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css"/>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.js"></script>
+	<script src="../../assets/js/bootstrap.js"></script>
 </head>
 
   <body>    
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
 	
 	<jsp:useBean id="controller" class="controllers.GameController"></jsp:useBean>
  	

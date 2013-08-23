@@ -34,9 +34,6 @@
 		</c:forEach>	
 		</tbody>
 	</table>
-
-<f:view>
-</f:view>
 </body>
 </html>
 </jsp:root>
