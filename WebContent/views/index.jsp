@@ -7,7 +7,7 @@
 <head>
 	<title>Controle de Games</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css"/>
-	
+	<link rel="stylesheet" type="text/css" href="../assets/css/icons-desktop.css"/>
 
 	<script src="../assets/js/jquery-1.7.1.min.js"></script>
 	<script src="../assets/js/bootstrap.js"></script>
@@ -25,8 +25,9 @@
 								class="dropdown-toggle" href="#">Games<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
-									<li><a href="?view=game/lista">Listar</a></li>
-									<li><a href="?view=game/cadastro">Cadastrar</a></li>
+									<li><a href="?view=game/game-lista">Listar</a></li>
+									<li><a href="?view=game/game-pesquisar">Pesquisar</a></li>
+									<li><a href="?view=game/game-cadastrar">Cadastrar</a></li>
 								</ul></li>
 							
 							<li class="dropdown"><a data-toggle="dropdown"
@@ -69,7 +70,8 @@
 			<jsp:include page="<%=url.content()%>" flush="true"></jsp:include>
 			<!-- fim de carregamento dinamico -->
 		</div>
-		
+
+		<br>
 		<div class="footer">
 			<p>&copy; Company 2013</p>
 		</div>
