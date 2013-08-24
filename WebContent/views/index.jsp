@@ -33,6 +33,7 @@
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Mídias</li>
+									<li><a href="?view=midia/lista">Listar</a></li>
 									<li><a href="#">Pesquisar</a></li>
 									<li><a href="#">Cadastrar</a></li>
 								</ul></li>
@@ -41,6 +42,7 @@
 								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Plataforma</li>
+									<li><a href="?view=plataforma/lista">Listar</a></li>
 									<li><a href="#">Pesquisar</a></li>
 									<li><a href="#">Cadastrar</a></li>
 								</ul>
@@ -50,6 +52,7 @@
 								class="dropdown-toggle" href="#">Gênero<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Gênero</li>
+									<li><a href="?view=genero/lista">Listar</a></li>
 									<li><a href="#">Pesquisar</a></li>
 									<li><a href="#">Cadastrar</a></li>
 								</ul></li>
@@ -58,6 +61,7 @@
 				</div>
 			</div>
 		</div>
+	
 		<div class="row-fluid">
 			<!--Carregamento de conteudo dinamico-->
 			<%
