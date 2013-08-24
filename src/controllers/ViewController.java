@@ -38,14 +38,14 @@ public class ViewController {
 
 		try{
 			this.pages.add("inicio.jsp");
-			this.pages.add("game/lista");
-			this.pages.add("game/cadastro");
-			this.pages.add("genero/lista");
-			this.pages.add("genero/cadastro");
-			this.pages.add("plataforma/lista");
-			this.pages.add("plataforma/cadastro");
-			this.pages.add("midia/lista");
-			this.pages.add("midia/cadastro");
+			this.pages.add("game/game-lista");
+			this.pages.add("game/game-cadastro");
+			this.pages.add("genero/genero-lista");
+			this.pages.add("genero/genero-cadastro");
+			this.pages.add("plataforma/plataforma-lista");
+			this.pages.add("plataforma/plataforma-cadastro");
+			this.pages.add("midia/midia-lista");
+			this.pages.add("midia/midia-cadastro");
 		}catch(Exception e){
 			System.out.println("Erro ao setar paginas");
 		}
