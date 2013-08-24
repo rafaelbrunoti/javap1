@@ -16,7 +16,7 @@
 <body>
 <legend>Lista de Games</legend>
 <div class="span10">	
-	<table class="table table-bordered">
+	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
 				<th>Cód</th>

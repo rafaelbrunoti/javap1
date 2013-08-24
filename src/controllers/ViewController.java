@@ -9,15 +9,15 @@ public class ViewController {
 
 	public String content() {
 
-		System.out.print("Array de paginas setado | ");
 		this.setArrayPages();
+		System.out.print("Array de paginas setado | ");
 		
 		System.out.print("Pagina buscada: " + this.view + " | ");
 
 		if (this.view == null || this.view == "" || this.view.isEmpty()) {
 			
 			System.out.print("Nenhum parametro de pagina encontrado, setando pagina padrão | ");
-			this.setView("game/lista.jsp");
+			this.setView("inicio.jsp");
 			
 		} else {
 			if (this.verifyPage(this.view)) {
@@ -36,15 +36,19 @@ public class ViewController {
 
 	public void setArrayPages() {
 
-		this.pages.add("game/lista");
-		this.pages.add("game/cadastro");
-		this.pages.add("genero/lista");
-		this.pages.add("genero/cadastro");
-		this.pages.add("plataforma/lista");
-		this.pages.add("plataforma/cadastro");
-		this.pages.add("midia/lista");
-		this.pages.add("midia/cadastro");
-
+		try{
+			this.pages.add("inicio.jsp");
+			this.pages.add("game/lista");
+			this.pages.add("game/cadastro");
+			this.pages.add("genero/lista");
+			this.pages.add("genero/cadastro");
+			this.pages.add("plataforma/lista");
+			this.pages.add("plataforma/cadastro");
+			this.pages.add("midia/lista");
+			this.pages.add("midia/cadastro");
+		}catch(Exception e){
+			System.out.println("Erro ao setar paginas");
+		}
 	}
 
 	public Boolean verifyPage(String page) {
