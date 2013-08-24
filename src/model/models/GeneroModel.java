@@ -25,7 +25,7 @@ public class GeneroModel {
 		
 		sql = "insert into genero (gen_nome, gen_descricao) VALUES ("
 				     +"'"+generoBean.getGen_nome()+"',"
-				     +"'"+generoBean.getGen_descricao()+"'";
+				     +"'"+generoBean.getGen_descricao()+"')";
 		
 		try{		
 			

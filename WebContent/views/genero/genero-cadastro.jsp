@@ -9,7 +9,7 @@
 <div class="well span4">
 	<div align="center"><fieldset>Cadastro Gêneros</fieldset></div>
 	<br>
-	<form action="GeneroServlet" method="POST">
+	<form action="/javap1/GeneroServlet" method="POST">
 		<div class="control-group">
 			<label class="control-label" for="inputEmail">Código:</label>
 			<div class="controls">

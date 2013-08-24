@@ -25,24 +25,24 @@
 								class="dropdown-toggle" href="#">Games<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
-									<li><a href="?view=game/lista">Listar</a></li>
-									<li><a href="?view=game/cadastro">Cadastrar</a></li>
+									<li><a href="?view=game/game-lista">Listar</a></li>
+									<li><a href="?view=game/game-cadastro">Cadastrar</a></li>
 								</ul></li>
 							
 							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Mídias</li>
-									<li><a href="?view=midia/lista">Listar</a></li>
-									<li><a href="?view=midia/cadastro">Cadastrar</a></li>
+									<li><a href="?view=midia/midia-lista">Listar</a></li>
+									<li><a href="?view=midia/midia-cadastro">Cadastrar</a></li>
 								</ul></li>
 							
 							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Plataforma</li>
-									<li><a href="?view=plataforma/lista">Listar</a></li>
-									<li><a href="?view=plataforma/cadastro">Cadastrar</a></li>
+									<li><a href="?view=plataforma/plataforma-lista">Listar</a></li>
+									<li><a href="?view=plataforma/plataforma-cadastro">Cadastrar</a></li>
 								</ul>
 							<li>
 							
@@ -50,8 +50,8 @@
 								class="dropdown-toggle" href="#">Gênero<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Gênero</li>
-									<li><a href="?view=genero/lista">Listar</a></li>
-									<li><a href="?view=genero/cadastro">Cadastrar</a></li>
+									<li><a href="?view=genero/genero-lista">Listar</a></li>
+									<li><a href="?view=genero/genero-cadastro">Cadastrar</a></li>
 								</ul></li>
 						</ul>
 					</div>

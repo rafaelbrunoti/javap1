@@ -1,19 +1,22 @@
 package model.connection;
 
-import controllers.GameController;
-import model.beans.GameBean;
+import model.beans.GeneroBean;
 import model.connection.ODBCConnection;
+import model.models.GeneroModel;
 
 public class TestaConexao {
 
 	public static void main(String[]args) throws Exception{
 		ODBCConnection odbcConnection = new ODBCConnection();
 		
-		GameController controller = new GameController();
+		GeneroModel generoModel = new GeneroModel();
 		
-		GameBean bean = new GameBean();
+		GeneroBean bean = new GeneroBean();
 		
-	    controller.save();
+		bean.setGen_nome("Esportes");
+		bean.setGen_descricao("Futebol, Volei, Basquete, esportes em geral");
+		
+	    generoModel.insert(bean);
 		
 		 
 		// for (GameBean gameBean : controller.gameLista()){
@@ -25,8 +28,6 @@ public class TestaConexao {
 		//controller.response = response;
 		//GameBean gameBean = new GameBean();
 
-		 
-		 controller.save();
 		//controller.list();
 		
 		

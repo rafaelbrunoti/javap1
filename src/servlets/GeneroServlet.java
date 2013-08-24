@@ -31,7 +31,7 @@ public class GeneroServlet extends HttpServlet {
     	
     	generoController.request = request;
     	generoController.response = response;
-    	GeneroBean generoBean = generoController.mostraDados();
+    	GeneroBean generoBean = new GeneroBean();
     	generoController.save();
     	
     	out.println("Nome do Genero do Game : " + generoBean.getGen_nome());
@@ -42,11 +42,11 @@ public class GeneroServlet extends HttpServlet {
     		GeneroController gnController = new GeneroController();
 			gnController.generoLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/genero/lista.jsp");
+					.getRequestDispatcher("/views/genero/genero-lista.jsp");
 			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/genero/lista.jsp");
+			response.sendRedirect(request.getContextPath() + "/views/genero/genero-lista.jsp");
 			
 		}
 		catch(Exception e){
