@@ -42,11 +42,11 @@ public class GeneroServlet extends HttpServlet {
     		GeneroController gnController = new GeneroController();
 			gnController.generoLista();
 			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/genero/listagenero.jsp");
+					.getRequestDispatcher("/views/genero/lista.jsp");
 			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/genero/listagenero.jsp");
+			response.sendRedirect(request.getContextPath() + "/views/genero/lista.jsp");
 			
 		}
 		catch(Exception e){

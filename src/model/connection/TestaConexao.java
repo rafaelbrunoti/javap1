@@ -10,13 +10,15 @@ public class TestaConexao {
 		ODBCConnection odbcConnection = new ODBCConnection();
 		
 		GameController controller = new GameController();
-
-	    controller.gameLista();
+		
+		GameBean bean = new GameBean();
+		
+	    controller.save();
 		
 		 
-		 for (GameBean gameBean : controller.gameLista()){
-			 System.out.println( gameBean.getGame_nome());
-		 }
+		// for (GameBean gameBean : controller.gameLista()){
+		//	 System.out.println( gameBean.getGame_nome());
+		//}
 		 
 		 
 		//controller.request = request;
