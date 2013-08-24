@@ -1,0 +1,48 @@
+/* 
+    Document   : icons-desktop
+    Created on : 30/06/2013, 19:48:35
+    Author     : Bruno
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.icon-person{
+    background-image: url("../img/various.png");
+    width: 100px;
+    height: 100px;
+    background-position: -225px -360px;
+    background-repeat: no-repeat;
+}
+
+.icon-logout{
+    background-image: url("../img/various.png");
+    width: 100px;
+    height: 100px;
+    background-position: -112px -360px;
+    background-repeat: no-repeat;
+}
+
+.icon-paste-eng{
+    background-image: url("../img/various.png");
+    width: 100px;
+    height: 100px;
+    background-position: -790px -360px;
+    background-repeat: no-repeat;
+}
+
+.icon-package{
+    background-image: url("../img/various.png");
+    width: 100px;
+    height: 100px;
+    background-position: -790px -20px;
+    background-repeat: no-repeat;
+}
+
+.icon-flux{
+    background-image: url("../img/various.png");
+    width: 100px;
+    height: 100px;
+    background-position: -225px -132px;
+    background-repeat: no-repeat;
+}
+
