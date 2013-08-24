@@ -29,7 +29,7 @@
 		<div style=" float: left;"><input type="submit" value="Enviar" class="btn btn-large btn-primary"/></div> 
 		
 		<div align="right">
-			<a href="../../views/index.jsp"><input type="button" value="Voltar"	class="btn btn-large btn-primary" /></a>
+			<a href="../views/index.jsp"><input type="button" value="Voltar"	class="btn btn-large btn-primary" /></a>
 		</div>
 	</form>
 </div>
