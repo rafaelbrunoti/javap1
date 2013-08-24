@@ -26,12 +26,7 @@
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
 									<li><a href="?view=game/game-lista">Listar</a></li>
-<<<<<<< HEAD
 									<li><a href="?view=game/game-cadastro">Cadastrar</a></li>
-=======
-									<li><a href="?view=game/game-pesquisar">Pesquisar</a></li>
-									<li><a href="?view=game/game-cadastrar">Cadastrar</a></li>
->>>>>>> 69ba076d77e884fbef9359baeb604a37a0f3a318
 								</ul></li>
 							
 							<li class="dropdown"><a data-toggle="dropdown"
