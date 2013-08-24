@@ -26,7 +26,6 @@
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
 									<li><a href="?view=game/lista">Listar</a></li>
-									<li><a href="?view=game/pesquisa">Pesquisar</a></li>
 									<li><a href="?view=game/cadastro">Cadastrar</a></li>
 								</ul></li>
 							
@@ -35,7 +34,6 @@
 								<ul class="dropdown-menu">
 									<li class="nav-header">Mídias</li>
 									<li><a href="?view=midia/lista">Listar</a></li>
-									<li><a href="?view=midia/pesquisa">Pesquisar</a></li>
 									<li><a href="?view=midia/cadastro">Cadastrar</a></li>
 								</ul></li>
 							
@@ -44,7 +42,6 @@
 								<ul class="dropdown-menu">
 									<li class="nav-header">Plataforma</li>
 									<li><a href="?view=plataforma/lista">Listar</a></li>
-									<li><a href="?view=plataforma/pesquisa">Pesquisar</a></li>
 									<li><a href="?view=plataforma/cadastro">Cadastrar</a></li>
 								</ul>
 							<li>
@@ -54,7 +51,6 @@
 								<ul class="dropdown-menu">
 									<li class="nav-header">Gênero</li>
 									<li><a href="?view=genero/lista">Listar</a></li>
-									<li><a href="?view=genero/pesquisa">Pesquisar</a></li>
 									<li><a href="?view=genero/cadastro">Cadastrar</a></li>
 								</ul></li>
 						</ul>
