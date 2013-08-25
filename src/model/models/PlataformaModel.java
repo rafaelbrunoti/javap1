@@ -25,7 +25,7 @@ public class PlataformaModel {
 		
 		sql = "insert into plataforma (pla_nome, pla_descricao) VALUES ("
 				     +"'"+plataformaBean.getPla_nome()+"',"
-				     +"'"+plataformaBean.getPla_descricao()+"'";
+				     +"'"+plataformaBean.getPla_descricao()+"')";
 		
 		try{		
 			

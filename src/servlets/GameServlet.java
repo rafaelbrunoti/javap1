@@ -47,12 +47,10 @@ public class GameServlet extends HttpServlet {
 			
     		GameController gmController = new GameController();
 			gmController.gameLista();
-			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/game/listagame.jsp");
-			rd.forward(request, response);
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/game/listagame.jsp");
+			response.sendRedirect(request.getContextPath() + "/views/?view=game/game-lista");	
+			
 			
 		}
 		catch(Exception e){

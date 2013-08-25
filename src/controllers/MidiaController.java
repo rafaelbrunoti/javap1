@@ -17,25 +17,17 @@ public class MidiaController {
 		midiaModel = new MidiaModel();
 	}
 	
-	public MidiaBean mostraDados(){
-		
-		MidiaBean midiaBean = new MidiaBean();
-		
-		midiaBean.setMid_id(Integer.parseInt(request.getParameter("mid_id")));
-		midiaBean.setMid_nome(request.getParameter("mid_nome"));
-		
-		return midiaBean;
-	}
 	
-	public void save(){
+    public void save(){
 		
-		MidiaBean midiaBean = new MidiaBean();
 		MidiaModel midiaModel = new MidiaModel();
+		MidiaBean midiaBean = new MidiaBean();
 		
-		midiaBean.setMid_id(Integer.parseInt(request.getParameter("mid_id")));
-		midiaBean.setMid_nome(request.getParameter("mid_nome"));
+		//generoBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
+		midiaBean.setMid_nome(request.getParameter("nome"));
 		
 		midiaModel.insert(midiaBean);
+		System.out.println(request.getParameter("nome"));
 	}
 	
 	public List<MidiaBean> midiaLista(){

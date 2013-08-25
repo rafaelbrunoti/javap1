@@ -24,7 +24,7 @@ public class MidiaModel {
 	public MidiaModel insert(MidiaBean midiaBean){
 		
 		sql = "insert into midia (mid_nome) VALUES ("
-				     +"'"+midiaBean.getMid_nome()+"'";
+				     +"'"+midiaBean.getMid_nome()+"')";
 		
 		try{		
 			

@@ -22,7 +22,7 @@ public class GameController {
 	
 	public GameBean mostraDados(){
 		GameBean gameBean = new GameBean();
-    	gameBean.setGame_id(Integer.parseInt(request.getParameter("game_id")));
+    	//gameBean.setGame_id(Integer.parseInt(request.getParameter("game_id")));
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	//gameBean.setGame_data(request.getParameter("game_data"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));

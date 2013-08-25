@@ -13,47 +13,31 @@ import javax.servlet.http.HttpServletResponse;
 import model.beans.PlataformaBean;
 import controllers.PlataformaController;
 
-
 @WebServlet("/PlataformaServlet")
 public class PlataformaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-    public PlataformaServlet() {
-        super();
-    }
-    
-    protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
-    	PrintWriter out = response.getWriter();
-    	
-    	PlataformaController platarformaController = new PlataformaController();
-    	
-    	platarformaController.request = request;
-    	platarformaController.response = response;
-    	PlataformaBean plataformaBean = platarformaController.mostraDados();
-    	platarformaController.save();
-    	
-    	out.println("Nome da Plataforma do Game: " + plataformaBean.getPla_nome());
-    	out.println("Nome da Plataforma do Game: " + plataformaBean.getPla_descricao());
-    	
-    	try{
-			
-    		PlataformaController plaController = new PlataformaController();
-			plaController.plataformaLista();
-			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/plataforma/listaplataforma.jsp");
-			rd.forward(request, response);
-			
-			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/plataforma/listaplataforma.jsp");
-			
-		}
-		catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-    }
-
+	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter out = response.getWriter();
+		
+		PlataformaController controller = new PlataformaController();
+		controller.request = request;
+		controller.response = response;
+		
+		String plataformaNome = request.getParameter("nome");
+		String plataformaDescricao = request.getParameter("descricao");
+		
+		//Criação do objeto model
+		PlataformaBean bean = new PlataformaBean();
+		bean.setPla_nome(plataformaNome);
+		bean.setPla_descricao(plataformaDescricao);
+		controller.save();
+		
+		response.sendRedirect(request.getContextPath() + "/views/?view=plataforma/plataforma-lista");		
+		
+		
+	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.execute(request, response);
@@ -61,7 +45,9 @@ public class PlataformaServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		this.execute(request, response);
+
 	}
 
 }

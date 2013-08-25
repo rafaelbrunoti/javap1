@@ -17,28 +17,18 @@ public class GeneroController {
 		generoModel = new GeneroModel();
 	}
 	
-	public GeneroBean mostraDados(){
-		
-		GeneroBean generoBean = new GeneroBean();
-		
-		generoBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
-		generoBean.setGen_nome(request.getParameter("gen_nome"));
-		generoBean.setGen_descricao(request.getParameter("gen_descricao"));
-    	
-		return generoBean;
-	}
 	
     public void save(){
 		
 		GeneroModel generoModel = new GeneroModel();
 		GeneroBean generoBean = new GeneroBean();
 		
-		generoBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
-		generoBean.setGen_nome(request.getParameter("gen_nome"));
-		generoBean.setGen_descricao(request.getParameter("gen_descricao"));
+		//generoBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
+		generoBean.setGen_nome(request.getParameter("nome"));
+		generoBean.setGen_descricao(request.getParameter("descricao"));
 		
 		generoModel.insert(generoBean);
-		System.out.println(request.getParameter("game_nome"));
+		System.out.println(request.getParameter("nome"));
 	}
 	
 	public List<GeneroBean> generoLista(){
