@@ -20,6 +20,7 @@
 					<td><a class="btn btn btn-mini btn-primary " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit"></i></a></td>
 					<td><a class="btn btn btn-mini btn-danger " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign"/></a></td>
 				</tr>
+<<<<<<< HEAD
 			</c:forEach>
 		</tbody>
 	</table>
@@ -27,3 +28,14 @@
 <div class="span10">
 	<a class="btn btn-success" href="index.jsp">Voltar</a>
 </div>
+=======
+			</c:forEach>	
+			</tbody>
+		</table>
+	</div>
+	<div class="span10">
+		<a class="btn btn-success" href="../views/index.jsp">Voltar</a>
+	</div>
+</body>
+</html>
+>>>>>>> 30620ba855c6e00e23cae1fa1ad28d4aca16913a
