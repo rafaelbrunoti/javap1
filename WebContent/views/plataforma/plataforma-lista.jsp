@@ -28,9 +28,5 @@
 	</table>
 </div>
 <div class="span10">
-<<<<<<< HEAD
 	<a class="btn btn-success" href="index.jsp">Voltar</a>
-=======
-		<a class="btn btn-success" href="../views/index.jsp">Voltar</a>
->>>>>>> 30620ba855c6e00e23cae1fa1ad28d4aca16913a
 </div>
