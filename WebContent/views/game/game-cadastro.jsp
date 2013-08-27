@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../../assets/css/style.css" />
 
 <!-- Inicio do primeiro formulário -->
-
+<!-- 
 <div class="well span7">
 	<div align="center"><fieldset>Cadastro Games</fieldset></div>
 	<br>
@@ -64,14 +64,13 @@
 			</table>
 		</div>
 		
-		<!-- input type="hidden" name="logica" value="AddUpdateContatoLogic" /--> 
 		<div style=" float: left; width: 220px; height: 45px; border:solid 0px;">
 			<div align="right">	
 				<input type="submit" value="Enviar" class="btn btn-large btn-primary"/>
 			</div>
 		</div> 
 		
-		<div style=" float: right; width: 220px; height: 45px; border: solid 0px;">			<!-- <div align="right" style="border:solid 1px;">  -->
+		<div style=" float: right; width: 220px; height: 45px; border: solid 0px;">			
 			<div align="left">
 				<a href="../views/index.jsp">
 					<input type="button" value="Voltar" class="btn btn-large btn-primary" />
@@ -80,7 +79,7 @@
 		</div>
 	</form>
 </div>
-
+-->
 <!-- Fim do primeiro formulário -->
 
 
@@ -127,7 +126,7 @@
 								<tr>
 									<td style="border solid: 1px;">
 										<div style="border: solid 1px #27408B; display: table-cell; vertical-align: middle; text-align:center; width: 160px; height: 90px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding:10px;" align="center">
-											<img src="" id=""  class="myicon_big" style="-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;">
+											<img src="" id=""  class="myicon_big" style=" -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;">
 										</div>
 									</td>
 								</tr>
@@ -158,9 +157,9 @@
 				<table>
 					<tr style=" border: solid 0px;">
 						<td>
-							<div class="controls" style="width:522px;  height:100px; border: solid 0px;">
+							<div class="controls" style="width:490px;  height:100px; border: solid 0px;">
 								<label class="control-label">Descrição:</label>
-								<textarea rows="3" cols="5" style="width:500px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"></textarea>
+								<textarea rows="3" cols="5" style="width:473px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"></textarea>
 							</div>
 						</td>
 					</tr>
