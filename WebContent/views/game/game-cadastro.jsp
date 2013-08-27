@@ -91,11 +91,11 @@
 	</div>
 	<br>
 	<form action="GameServlet" method="POST">
-		<div class="control-group">
+		<div class="control-group" style="border: solid 0px red;">
 			<div style="border: solid 0px red;">
 				<table>
 					<tr style="border: solid 0px;">
-						<td style="vertical-align: top; padding: 10px;">
+						<td style="vertical-align: top; padding: 10px; border: solid 0px; height: 100px;">
 						
 							<label class="control-label">Código:</label>
 							<div class="controls">
@@ -119,21 +119,19 @@
 							<br>	
 						</td>
 						
-						<td style="width: 40px;"></td>
+						<td style="width: 40px; border: solid 0px; height: 100px;" ></td>
 						
-						<td style="vertical-align: top; padding: 10px;">
+						<td style="vertical-align: top; padding: 10px; border: solid 0px; height: 100px;">
 							<table>
 								<tr>
-									<td style="border solid: 1px;">
-										<div style="border: solid 1px #27408B; display: table-cell; vertical-align: middle; text-align:center; width: 160px; height: 90px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding:10px;" align="center">
+									<td style="border solid: 0px;">
+										<label class="control-label">Capa:</label>
+										<div style="border: solid 1px #27408B; display: table-cell; cursor:pointer; vertical-align: middle; text-align:center; width: 85px; height: 65px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding:10px;" align="center">
 											<img src="" id=""  class="myicon_big" style=" -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;">
 										</div>
 									</td>
 								</tr>
 								<tr style="height: 13px; border: solid 0px;"></tr>
-							</table>
-							
-							<table>
 								<tr>
 									<td>
 										<div>
@@ -156,10 +154,10 @@
 				</table>
 				<table>
 					<tr style=" border: solid 0px;">
-						<td>
-							<div class="controls" style="width:490px;  height:100px; border: solid 0px;">
+						<td style="vertical-align: top; padding: 10px; border: solid 0px; height: 100px;">
+							<div class="controls" style="width:478px;  height:100px; border: solid 0px;">
 								<label class="control-label">Descrição:</label>
-								<textarea rows="3" cols="5" style="width:473px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"></textarea>
+								<textarea rows="3" cols="5" style="width:460px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"></textarea>
 							</div>
 						</td>
 					</tr>
