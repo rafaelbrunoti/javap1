@@ -17,25 +17,13 @@ public class PlataformaController {
 		plataformaModel = new PlataformaModel();
 	}
 	
-	public PlataformaBean mostraDados(){
-		
-		PlataformaBean plataformaBean = new PlataformaBean();
-		
-		plataformaBean.setPla_id(Integer.parseInt(request.getParameter("pla_id")));
-		plataformaBean.setPla_nome(request.getParameter("pla_nome"));
-		plataformaBean.setPla_descricao(request.getParameter("pla_descricao"));
-    	
-		return plataformaBean;
-	}
-	
     public void save(){
 		
 		PlataformaModel plataformaModel = new PlataformaModel();
 		PlataformaBean plataformaBean = new PlataformaBean();
 		
-		plataformaBean.setPla_id(Integer.parseInt(request.getParameter("pla_id")));
-		plataformaBean.setPla_nome(request.getParameter("pla_nome"));
-		plataformaBean.setPla_descricao(request.getParameter("pla_descricao"));
+		plataformaBean.setPla_nome(request.getParameter("nome"));
+		plataformaBean.setPla_descricao(request.getParameter("descricao"));
 				
 		plataformaModel.insert(plataformaBean);
 		System.out.println(request.getParameter("game_nome"));

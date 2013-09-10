@@ -18,41 +18,24 @@ import controllers.MidiaController;
 public class MidiaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-    public MidiaServlet() {
-        super();
-    }
-    
-    protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
-    	PrintWriter out = response.getWriter();
-    	
-    	MidiaController midiaController = new MidiaController();
-    	
-    	midiaController.request = request;
-    	midiaController.response = response;
-    	MidiaBean midiaBean = midiaController.mostraDados();
-    	midiaController.save();
-    	
-    	out.println("Nome da Midia do Game : " + midiaBean.getMid_nome());
-    	
-    	try{
-			
-    		MidiaController mdController = new MidiaController();
-			mdController.midiaLista();
-			RequestDispatcher rd = request
-					.getRequestDispatcher("/views/midia/listamidia.jsp");
-			rd.forward(request, response);
-			
-			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/midia/listamidia.jsp");
-			
-		}
-		catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-    }	
-
+	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter out = response.getWriter();
+		
+		MidiaController controller = new MidiaController();
+		controller.request = request;
+		controller.response = response;
+		
+		String midiaNome = request.getParameter("nome");
+		
+		//Criação do objeto model
+		MidiaBean bean = new MidiaBean();
+		bean.setMid_nome(midiaNome);
+		controller.save();
+		
+		response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista");	
+		
+	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.execute(request, response);
@@ -60,7 +43,9 @@ public class MidiaServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		this.execute(request, response);
+
 	}
 
 }
