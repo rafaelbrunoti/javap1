@@ -49,7 +49,7 @@ public class GameServlet extends HttpServlet {
 			gmController.gameLista();
 			
 			//esse response.sendRedirect eu meio que inventei, não sei se vai dar certo!
-			response.sendRedirect(request.getContextPath() + "/views/?view=game/game-lista.jsp");	
+			response.sendRedirect(request.getContextPath() + "/views/?view=game/game-lista");	
 			
 			
 		}

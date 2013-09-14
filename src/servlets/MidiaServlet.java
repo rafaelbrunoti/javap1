@@ -33,7 +33,7 @@ public class MidiaServlet extends HttpServlet {
 		bean.setMid_nome(midiaNome);
 		controller.save();
 		
-		response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista.jsp");	
+		response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista");	
 		
 	}
 	
