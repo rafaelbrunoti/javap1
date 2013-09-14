@@ -137,14 +137,26 @@
 								<tr>
 									<td style="border solid: 0px;">
 										<label class="control-label">Capa:</label>
-										<div class="capa" id="image">
-											
+										<div class="capa">
+    									 <img id="blah" src="#" alt="your image" />
+    									 <script>
+    									   function readURL(input) {
+    								            if (input.files && input.files[0]) {
+    								                var reader = new FileReader();
+
+    								                reader.onload = function (e) {
+    								                    $('#blah')
+    								                        .attr('src', e.target.result)
+    								                        .width(220)
+    								                        .height(150);
+    								                };
+
+    								                reader.readAsDataURL(input.files[0]);
+    								            }
+    								        }
+										  </script>											
 										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<input type="file" name="capa" id="input-image"></input>
+										<input type='file' onchange="readURL(this);" />
 									</td>
 								</tr>
 								
