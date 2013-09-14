@@ -39,7 +39,7 @@ public class GameServlet extends HttpServlet {
 		out.println("Data do Game : " + gameBean.getGame_data());
 		out.println("Descricao do Game : " + gameBean.getGame_descricao());
 		out.println("Capa do Game : " + gameBean.getGame_capa());
-		out.println("Data do Game : " + gameBean.getGen_id());
+		out.println("ID do Genero do Game : " + gameBean.getGen_id());
 		out.println("ID da Plataforma do Game : " + gameBean.getPla_id());
 		out.println("ID da Midia do Game : " + gameBean.getMid_id());
     	
