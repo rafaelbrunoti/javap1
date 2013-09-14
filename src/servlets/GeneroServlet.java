@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.ParseConversionEvent;
 
 import model.beans.GeneroBean;
 import controllers.GeneroController;
@@ -26,16 +27,23 @@ public class GeneroServlet extends HttpServlet {
 		controller.request = request;
 		controller.response = response;
 		
+		String generoId = request.getParameter("id");
 		String generoNome = request.getParameter("nome");
 		String generoDescricao = request.getParameter("descricao");
 		
 		//Criação do objeto model
 		GeneroBean bean = new GeneroBean();
+		
+		//If para verificar se é cadastro ou alteração
+		if ((generoId.trim().length() != 0)){
+     	   bean.setGen_id(Integer.parseInt(generoId));
+		}
+		
 		bean.setGen_nome(generoNome);
 		bean.setGen_descricao(generoDescricao);
 		controller.save();
 		
-		response.sendRedirect(request.getContextPath() + "/views/?view=genero/genero-lista");		
+		response.sendRedirect(request.getContextPath() + "/views/?view=genero/genero-lista.jsp");		
 		
 		
 	}
