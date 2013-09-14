@@ -34,7 +34,7 @@ public class PlataformaServlet extends HttpServlet {
 		bean.setPla_descricao(plataformaDescricao);
 		controller.save();
 		
-		response.sendRedirect(request.getContextPath() + "/views/?view=plataforma/plataforma-lista.jsp");		
+		response.sendRedirect(request.getContextPath() + "/views/?view=plataforma/plataforma-lista");		
 		
 		
 	}
