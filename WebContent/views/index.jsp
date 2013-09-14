@@ -11,7 +11,6 @@
 
 	<script src="../assets/js/jquery-1.7.1.min.js"></script>
 	<script src="../assets/js/bootstrap.js"></script>
-	<script src="../assets/js/twitter-bootstrap-hover-dropdown.min.js"></script>
 </head>
 <body>
 	
@@ -21,30 +20,38 @@
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="nav-collapse collapse">
-						<ul class="nav">                         
-							<li class="dropdown"><a data-toggle="dropdown" data-hover="dropdown" data-delay="10" data-close-others="false"
-								class="dropdown-toggle" href="?view=">Área de Trabalho<b></b></a>
-							</li>
-							
-							<li class="dropdown"><a data-toggle="dropdown" data-hover="dropdown" data-delay="10" data-close-others="false"
+						<ul class="nav">
+							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Games<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
+<<<<<<< HEAD
 									<li><a href="?view=game/game-lista.jsp">Listar</a></li>
 									<li><a href="?view=game/game-cadastro.jsp">Cadastrar</a></li>
 								</ul>
 							</li>
+=======
+									<li><a href="?view=game/game-lista">Listar</a></li>
+									<li><a href="?view=game/game-cadastro">Cadastrar</a></li>
+								</ul></li>
+>>>>>>> acd561a364b373774344f4a2f1937a2306f5fb5b
 							
-							<li class="dropdown"><a data-toggle="dropdown" data-hover="dropdown" data-delay="10" data-close-others="false"
+							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Mídias</li>
+<<<<<<< HEAD
 									<li><a href="?view=midia/midia-lista.jsp">Listar</a></li>
 									<li><a href="?view=midia/midia-cadastro.jsp">Cadastrar</a></li>
 								</ul>
 							</li>
+=======
+									<li><a href="?view=midia/midia-lista">Listar</a></li>
+									<li><a href="?view=midia/midia-cadastro">Cadastrar</a></li>
+								</ul></li>
+>>>>>>> acd561a364b373774344f4a2f1937a2306f5fb5b
 							
-							<li class="dropdown"><a data-toggle="dropdown" data-hover="dropdown" data-delay="10" data-close-others="false"
+							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Plataforma</li>
@@ -53,7 +60,7 @@
 								</ul>
 							<li>
 							
-							<li class="dropdown"><a data-toggle="dropdown" data-hover="dropdown" data-delay="10" data-close-others="false"
+							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Gênero<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Gênero</li>
@@ -85,5 +92,4 @@
 	
 
 </body>
-
 </html>
