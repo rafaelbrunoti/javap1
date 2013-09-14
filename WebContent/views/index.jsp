@@ -27,12 +27,9 @@
 									<li class="nav-header">Games</li>
 									<li><a href="?view=game/game-lista">Listar</a></li>
 									<li><a href="?view=game/game-cadastro">Cadastrar</a></li>
-<<<<<<< HEAD
-								</ul></li>
-=======
+
 								</ul>
 							</li>
->>>>>>> bb833aa9d5775864a9126ec4a7a4efbe051dc7b1
 							
 							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
@@ -40,13 +37,9 @@
 									<li class="nav-header">Mídias</li>
 									<li><a href="?view=midia/midia-lista">Listar</a></li>
 									<li><a href="?view=midia/midia-cadastro">Cadastrar</a></li>
-<<<<<<< HEAD
-								</ul></li>
-=======
+
 								</ul>
 							</li>
->>>>>>> bb833aa9d5775864a9126ec4a7a4efbe051dc7b1
-							
 							<li class="dropdown"><a data-toggle="dropdown"
 								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
