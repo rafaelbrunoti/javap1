@@ -12,18 +12,27 @@ public class GeneroController {
 	public HttpServletRequest request;
 	public HttpServletResponse response;
 	public GeneroModel generoModel;
+	public GeneroBean generoBean;
+	
+	private Integer gen_id;
+	
+	public Integer getGen_id() {
+		return gen_id;
+	}
+	
+	public void setGen_id(Integer gen_id) {
+		this.gen_id = gen_id;
+	}
 	
 	public GeneroController(){
 		generoModel = new GeneroModel();
+		generoBean = new GeneroBean();
 	}
 	
 	
     public void save(){
 		
-		GeneroModel generoModel = new GeneroModel();
-		GeneroBean generoBean = new GeneroBean();
-		
-		String gen_id = request.getParameter("gen_id");
+		String gen_id = request.getParameter("id");
 		generoBean.setGen_nome(request.getParameter("nome"));
 		generoBean.setGen_descricao(request.getParameter("descricao"));
 		
@@ -39,18 +48,22 @@ public class GeneroController {
 	}
 	
     public void delete(){
-		
-		GeneroModel generoModel = new GeneroModel();
-		GeneroBean generoBean = new GeneroBean();
-		
-		String gen_id = request.getParameter("gen_id");
+
+		String gen_id = request.getParameter("id");
 		generoBean.setGen_id(Integer.parseInt(gen_id));
 		generoModel.remove(generoBean);
 	}
     
     
-	public List<GeneroBean> generoLista(){
-		return generoModel.select("");
+	public List<GeneroBean> generoLista(){		
+		return generoModel.select(generoBean);
+	}
+	
+	public GeneroBean generoPorId(){
+		generoBean.setGen_id(getGen_id());
+		System.out.println(generoModel.select(generoBean).get(0));
+		return generoModel.select(generoBean).get(0);
+		
 	}
 
 }

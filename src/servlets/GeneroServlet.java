@@ -41,7 +41,14 @@ public class GeneroServlet extends HttpServlet {
 		
 		bean.setGen_nome(generoNome);
 		bean.setGen_descricao(generoDescricao);
-		controller.save();
+		
+		if(request.getParameter("acao") == null){
+			controller.save();
+		}else
+		{
+			controller.delete();
+		}
+		
 		
 		response.sendRedirect(request.getContextPath() + "/views/?view=genero/genero-lista");		
 		

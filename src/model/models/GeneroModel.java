@@ -43,12 +43,14 @@ public class GeneroModel {
 		return generoModel;
 		
 	}
-	public List<GeneroBean>  select(String sql){
+	public List<GeneroBean>  select(GeneroBean generoBean){
         try{
             List<GeneroBean> generoLista = new ArrayList<GeneroBean>();
+            String sql = "select * from genero where 1=1 ";
             
-            sql = "select * from genero";
-            
+            if (generoBean.getGen_id() != null ){
+            	sql += "and gen_id = "+generoBean.getGen_id();
+            }
             
             
             stmt  = odbcConnection.connect().prepareStatement(sql);
@@ -57,13 +59,13 @@ public class GeneroModel {
             
             while (rs.next()){
             	
-            	GeneroBean generoBean = new GeneroBean();
+            	GeneroBean genero = new GeneroBean();
 
-            	generoBean.setGen_id(rs.getInt("gen_id"));
-            	generoBean.setGen_nome(rs.getString("gen_nome"));
-            	generoBean.setGen_descricao(rs.getString("gen_descricao"));
+            	genero.setGen_id(rs.getInt("gen_id"));
+            	genero.setGen_nome(rs.getString("gen_nome"));
+            	genero.setGen_descricao(rs.getString("gen_descricao"));
                 
-                generoLista.add(generoBean);
+                generoLista.add(genero);
                 
             }
             rs.close();
@@ -76,11 +78,15 @@ public class GeneroModel {
 	
 	public void altera(GeneroBean generoBean){
 	      
-        String sql = "update genero set gen_nome=?, gen_descricao=? where gen_id=?";
+        String sql = "UPDATE genero SET gen_nome=?, gen_descricao=? WHERE gen_id=?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setString(1, generoBean.getGen_nome());
             stmt.setString(2, generoBean.getGen_descricao());
+            stmt.setInt(3, generoBean.getGen_id());
+            
+            System.out.println(stmt.toString()); 
+            
             stmt.execute();
             stmt.close();
             

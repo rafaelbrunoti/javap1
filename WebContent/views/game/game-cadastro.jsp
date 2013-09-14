@@ -137,11 +137,17 @@
 								<tr>
 									<td style="border solid: 0px;">
 										<label class="control-label">Capa:</label>
-										<div class="capa">
-											<img src="" id=""  class="img-rounded">
+										<div class="capa" id="image">
+											
 										</div>
 									</td>
 								</tr>
+								<tr>
+									<td>
+										<input type="file" name="capa" id="input-image"></input>
+									</td>
+								</tr>
+								
 								<tr style="height: 13px; border: solid 0px;"></tr>
 								<tr>
 									<td>

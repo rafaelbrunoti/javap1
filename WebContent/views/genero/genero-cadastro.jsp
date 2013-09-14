@@ -1,3 +1,9 @@
+<%@page import="model.beans.GeneroBean"%>
+<jsp:useBean class="controllers.GeneroController" id="generoController"></jsp:useBean>
+<% int id = Integer.parseInt(request.getParameter("id"));  %>
+<jsp:setProperty property="gen_id" name="generoController" value="<%=id%>"/>
+<% GeneroBean generoBean = generoController.generoPorId(); %>
+
 <div class="well span4">
 	<div align="center"><fieldset>Cadastro Gêneros</fieldset></div>
 	<br>
@@ -5,17 +11,17 @@
 		<div class="control-group">
 			<label class="control-label">Código:</label>
 			<div class="controls">
-				<input type="text" name="id" value="" readonly	placeholder="Código" /><br />
+				<input type="text" name="id" value="<%=generoBean.getGen_id() %>" readonly	placeholder="Código" /><br />
 			</div>
 			
 			<label class="control-label">Nome:</label>
 			<div class="controls">
-				<input type="text" name="nome" value=""	placeholder="Nome" />
+				<input type="text" name="nome" value="<%=generoBean.getGen_nome() %>"	placeholder="Nome" />
 			</div>
 			
 			<label class="control-label">Descrição:</label>
 			<div class="controls">
-				<input type="text" name="descricao"	value="" placeholder="Descrição" /><br />
+				<input type="text" name="descricao"	value="<%=generoBean.getGen_descricao() %>" placeholder="Descrição" /><br />
 			</div>
 		</div>
 		
