@@ -60,10 +60,11 @@ public class GeneroController {
 	}
 	
 	public GeneroBean generoPorId(){
-		generoBean.setGen_id(getGen_id());
-		System.out.println(generoModel.select(generoBean).get(0));
-		return generoModel.select(generoBean).get(0);
-		
+		if (getGen_id()!= null){
+			generoBean.setGen_id(getGen_id());
+			return generoModel.select(generoBean).get(0);
+		}else
+			return generoBean;
 	}
 
 }

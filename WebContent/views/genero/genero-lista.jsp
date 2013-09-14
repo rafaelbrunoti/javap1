@@ -19,7 +19,7 @@
 					<td>${listas.getGen_id()}</td>
 					<td>${listas.getGen_nome()}</td>
 					<td>${listas.getGen_descricao()}</td>  		
-					<td><a class="btn btn btn-mini btn-primary " href="?view=genero/genero-cadastro&id=${listas.getGen_id()}" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
+					<td><a class="btn btn btn-mini btn-primary " href="?view=genero/genero-editar&id=${listas.getGen_id()}" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
 					<td><a class="btn btn btn-mini btn-danger " href="/javap1/GeneroServlet?id=${listas.getGen_id()}&acao=delete" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign icon-white"/></a></td>
 				</tr>
 			</c:forEach>
