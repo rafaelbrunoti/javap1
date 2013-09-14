@@ -18,9 +18,9 @@
 				<tr>
 					<td>${listas.getGen_id()}</td>
 					<td>${listas.getGen_nome()}</td>
-					<td>${listas.getGen_descricao()}</td>					
-					<td><a class="btn btn btn-mini btn-primary " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit"></i></a></td>
-					<td><a class="btn btn btn-mini btn-danger " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign"/></a></td>
+					<td>${listas.getGen_descricao()}</td>  		
+					<td><a class="btn btn btn-mini btn-primary " href="/LoadAltera&id=${listas.getGen_id()}" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit"></i></a></td>
+					<td><a class="btn btn btn-mini btn-danger " href="LoadAltera&id=${listas.getGen_id()}" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign"/></a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

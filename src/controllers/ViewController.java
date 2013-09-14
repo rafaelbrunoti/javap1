@@ -21,7 +21,7 @@ public class ViewController {
 			
 		} else {
 			if (this.verifyPage(this.view)) {
-				this.setView("" + this.view + ".jsp");
+				this.setView("" + this.view);
 			} else {
 				this.setView("404.jsp");
 			}
@@ -38,14 +38,14 @@ public class ViewController {
 
 		try{
 			this.pages.add("inicio.jsp");
-			this.pages.add("game/game-lista");
-			this.pages.add("game/game-cadastro");
-			this.pages.add("genero/genero-lista");
-			this.pages.add("genero/genero-cadastro");
-			this.pages.add("plataforma/plataforma-lista");
-			this.pages.add("plataforma/plataforma-cadastro");
-			this.pages.add("midia/midia-lista");
-			this.pages.add("midia/midia-cadastro");
+			this.pages.add("game/game-lista.jsp");
+			this.pages.add("game/game-cadastro.jsp");
+			this.pages.add("genero/genero-lista.jsp");
+			this.pages.add("genero/genero-cadastro.jsp");
+			this.pages.add("plataforma/plataforma-lista.jsp");
+			this.pages.add("plataforma/plataforma-cadastro.jsp");
+			this.pages.add("midia/midia-lista.jsp");
+			this.pages.add("midia/midia-cadastro.jsp");
 		}catch(Exception e){
 			System.out.println("Erro ao setar paginas");
 		}

@@ -23,14 +23,32 @@ public class GeneroController {
 		GeneroModel generoModel = new GeneroModel();
 		GeneroBean generoBean = new GeneroBean();
 		
-		//generoBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));
+		String gen_id = request.getParameter("gen_id");
 		generoBean.setGen_nome(request.getParameter("nome"));
 		generoBean.setGen_descricao(request.getParameter("descricao"));
 		
-		generoModel.insert(generoBean);
+		if ((gen_id == null)||(gen_id.trim().length() == 0)){
+			generoModel.insert(generoBean);
+		
+		}else{
+			generoBean.setGen_id(Integer.parseInt(gen_id));
+			generoModel.altera(generoBean);
+		}
+		
 		System.out.println(request.getParameter("nome"));
 	}
 	
+    public void delete(){
+		
+		GeneroModel generoModel = new GeneroModel();
+		GeneroBean generoBean = new GeneroBean();
+		
+		String gen_id = request.getParameter("gen_id");
+		generoBean.setGen_id(Integer.parseInt(gen_id));
+		generoModel.remove(generoBean);
+	}
+    
+    
 	public List<GeneroBean> generoLista(){
 		return generoModel.select("");
 	}

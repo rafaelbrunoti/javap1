@@ -30,8 +30,8 @@
 								class="dropdown-toggle" href="#">Games<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Games</li>
-									<li><a href="?view=game/game-lista">Listar</a></li>
-									<li><a href="?view=game/game-cadastro">Cadastrar</a></li>
+									<li><a href="?view=game/game-lista.jsp">Listar</a></li>
+									<li><a href="?view=game/game-cadastro.jsp">Cadastrar</a></li>
 								</ul>
 							</li>
 							
@@ -39,8 +39,8 @@
 								class="dropdown-toggle" href="#">Midias<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Mídias</li>
-									<li><a href="?view=midia/midia-lista">Listar</a></li>
-									<li><a href="?view=midia/midia-cadastro">Cadastrar</a></li>
+									<li><a href="?view=midia/midia-lista.jsp">Listar</a></li>
+									<li><a href="?view=midia/midia-cadastro.jsp">Cadastrar</a></li>
 								</ul>
 							</li>
 							
@@ -48,8 +48,8 @@
 								class="dropdown-toggle" href="#">Plataforma<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Plataforma</li>
-									<li><a href="?view=plataforma/plataforma-lista">Listar</a></li>
-									<li><a href="?view=plataforma/plataforma-cadastro">Cadastrar</a></li>
+									<li><a href="?view=plataforma/plataforma-lista.jsp">Listar</a></li>
+									<li><a href="?view=plataforma/plataforma-cadastro.jsp">Cadastrar</a></li>
 								</ul>
 							<li>
 							
@@ -57,8 +57,8 @@
 								class="dropdown-toggle" href="#">Gênero<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li class="nav-header">Gênero</li>
-									<li><a href="?view=genero/genero-lista">Listar</a></li>
-									<li><a href="?view=genero/genero-cadastro">Cadastrar</a></li>
+									<li><a href="?view=genero/genero-lista.jsp">Listar</a></li>
+									<li><a href="?view=genero/genero-cadastro.jsp">Cadastrar</a></li>
 								</ul></li>
 						</ul>
 					</div>

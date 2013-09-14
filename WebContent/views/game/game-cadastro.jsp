@@ -6,6 +6,17 @@
 <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../assets/css/style.css" />
 
+  <style type="text/css">
+  	.capa {
+    	width: 220px; 
+    	height: 150px; 
+    	border: 2px; 
+    	border-color: black; 
+    	border-style:solid;
+    	border-radius: 10px;
+	}
+  </style>
+
 <!-- Inicio do primeiro formulário -->
 <!-- 
 <div class="well span7">
@@ -47,6 +58,7 @@
 					<select>
 						<option>Selecione..</option>
 					</select>
+					
 					<label class="control-label">Genero:</label>
 					<select>
 						<option>Selecione..</option>
@@ -119,15 +131,14 @@
 							<br>	
 						</td>
 						
-						<td style="width: 40px; border: solid 0px; height: 100px;" ></td>
-						
+											
 						<td style="vertical-align: top; padding: 10px; border: solid 0px; height: 100px;">
 							<table>
 								<tr>
 									<td style="border solid: 0px;">
 										<label class="control-label">Capa:</label>
-										<div style="border: solid 1px #27408B; display: table-cell; cursor:pointer; vertical-align: middle; text-align:center; width: 85px; height: 65px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding:10px;" align="center">
-											<img src="" id=""  class="myicon_big" style=" -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;">
+										<div class="capa">
+											<img src="" id=""  class="img-rounded">
 										</div>
 									</td>
 								</tr>
@@ -165,17 +176,23 @@
 			</div>
 		</div>
 		
-		<div style=" float: left; width: 220px; height: 45px; border:solid 0px;">
-			<div align="right">	
-				<input type="submit" value="Enviar" class="btn btn-large btn-primary"/>
+		<div>
+			<div
+				style="float: left; width: 220px; height: 45px; border: solid 0px;">
+				<div align="right">
+					<input type="submit" value="Enviar"
+						class="btn btn-large btn-primary" />
+				</div>
 			</div>
-		</div> 
-		
-		<div style=" float: right; width: 220px; height: 45px; border: solid 0px;">			<!-- <div align="right" style="border:solid 1px;">  -->
-			<div align="left">
-				<a href="../views/index.jsp">
-					<input type="button" value="Voltar" class="btn btn-large btn-primary" />
-				</a>
+
+			<div
+				style="float: right; width: 220px; height: 45px; border: solid 0px;">
+				<!-- <div align="right" style="border:solid 1px;">  -->
+				<div align="left">
+					<a href="../views/index.jsp"> <input type="button"
+						value="Voltar" class="btn btn-large btn-primary" />
+					</a>
+				</div>
 			</div>
 		</div>
 	</form>
