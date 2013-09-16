@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import model.beans.GameBean;
+import model.beans.GeneroBean;
 import model.connection.ODBCConnection;
 
 public class GameModel {
@@ -24,14 +25,15 @@ public class GameModel {
 	
 	public GameModel insert(GameBean gameBean){
 		
-		sql = "insert into game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES ("
+		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES ("
 				     +"'"+gameBean.getGame_nome()+"',"
-				     +"'"+gameBean.getGame_data()+"',"
+				     +"'2012/08/22',"
 				     +"'"+gameBean.getGame_descricao()+"',"
 				     +"'"+gameBean.getGame_capa()+"',"
 				     +"'"+gameBean.getGen_id()+"',"
 				     +"'"+gameBean.getPla_id()+"',"
 				     +"'"+gameBean.getMid_id()+"')";
+		
 		
 		try{		
 			
@@ -49,36 +51,46 @@ public class GameModel {
 		return gameModel;
 		
 	}
-	public List<GameBean>  select(String sql){
+	
+	public List<GameBean>  select(GameBean gameBean){
         try{
-            List<GameBean> gameLista = new ArrayList<GameBean>();
-            
-            sql = "select * from game";
-            
-            
-            
-            stmt  = odbcConnection.connect().prepareStatement(sql);
-            
-            rs = stmt.executeQuery();
-            
-            while (rs.next()){
+        	 List<GameBean> gameLista = new ArrayList<GameBean>();
+             String sql = "SELECT game.*, gen_nome, mid_nome, pla_nome FROM game " +
+            			    "INNER JOIN genero gen on gen.gen_id = game.gen_id "+
+            			    "INNER JOIN midia mid on mid.mid_id = game.mid_id "+
+            			    "INNER JOIN plataforma pla on pla.pla_id = game.pla_id "+
+            			  "WHERE 1=1 ";
+             
+             if (gameBean.getGame_id() != null ){
+             	sql += "and game_id = "+gameBean.getGame_id();
+             }
+             
+             
+             stmt  = odbcConnection.connect().prepareStatement(sql);
+             
+             rs = stmt.executeQuery();
+             
+             while (rs.next()){
             	
-            	GameBean gameBean = new GameBean();
+            	GameBean game = new GameBean();
 
-            	gameBean.setGame_id(rs.getInt("game_id"));
-            	gameBean.setGame_nome(rs.getString("game_nome"));
+            	game.setGame_id(rs.getInt("game_id"));
+            	game.setGame_nome(rs.getString("game_nome"));
             	
                 Calendar data = Calendar.getInstance();
                 data.setTime(rs.getDate("game_data"));         	           	
-            	gameBean.setGame_data(data);
+                game.setGame_data(data);
             	           
-            	gameBean.setGame_descricao(rs.getString("game_descricao"));
-            	gameBean.setGame_capa(rs.getString("game_capa"));
-            	gameBean.setGen_id(rs.getInt("gen_id"));
-            	gameBean.setMid_id(rs.getInt("mid_id"));
-            	gameBean.setPla_id(rs.getInt("pla_id"));
+                game.setGame_descricao(rs.getString("game_descricao"));
+                game.setGame_capa(rs.getString("game_capa"));
+                game.setGen_id(rs.getInt("gen_id"));
+                game.setGen_nome(rs.getString("gen_nome"));
+                game.setMid_id(rs.getInt("mid_id"));
+                game.setMid_nome(rs.getString("mid_nome"));
+                game.setPla_id(rs.getInt("pla_id"));
+                game.setPla_nome(rs.getString("pla_nome"));
                 
-                gameLista.add(gameBean);
+                gameLista.add(game);
                 
             }
             rs.close();
@@ -91,7 +103,7 @@ public class GameModel {
 	
 	public void altera(GameBean gameBean){
 	      
-        String sql = "update game set game_nome=?, game_data=?, game_descricao=?, gen_id=?, pla_id=?, mid_id=? where game_id=?";
+        String sql = "UPDATE game SET game_nome=?, game_data=?, game_descricao=?, gen_id=?, pla_id=?, mid_id=? WHERE game_id=?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setString(1, gameBean.getGame_nome());
@@ -100,6 +112,7 @@ public class GameModel {
             stmt.setInt(4, gameBean.getGen_id());
             stmt.setInt(5, gameBean.getMid_id());
             stmt.setInt(6, gameBean.getPla_id());
+            stmt.setInt(7, gameBean.getGame_id());
             stmt.execute();
             stmt.close();
             
@@ -109,9 +122,10 @@ public class GameModel {
     }
 	
 	public void remove(GameBean gameBean){
-        String sql = "delete from game where game_id =?";
+        String sql = "DELETE FROM game WHERE game_id =?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
+            System.out.println(gameBean.getGame_id());
             stmt.setInt(1, gameBean.getGame_id());
             stmt.execute();
             stmt.close();

@@ -43,6 +43,7 @@ public class GeneroModel {
 		return generoModel;
 		
 	}
+	
 	public List<GeneroBean>  select(GeneroBean generoBean){
         try{
             List<GeneroBean> generoLista = new ArrayList<GeneroBean>();
@@ -96,7 +97,7 @@ public class GeneroModel {
     }
 	
 	public void remove(GeneroBean generoBean){
-        String sql = "delete from genero where gen_id =?";
+        String sql = "DELETE FROM genero WHERE gen_id =?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setInt(1, generoBean.getGen_id());

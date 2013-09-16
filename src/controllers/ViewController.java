@@ -39,13 +39,16 @@ public class ViewController {
 		try{
 			this.pages.add("inicio");
 			this.pages.add("game/game-lista");
+			this.pages.add("game/game-editar");
 			this.pages.add("game/game-cadastro");
 			this.pages.add("genero/genero-lista");
+			this.pages.add("genero/genero-editar");
 			this.pages.add("genero/genero-cadastro");
 			this.pages.add("genero/genero-editar");
 			this.pages.add("plataforma/plataforma-lista");
 			this.pages.add("plataforma/plataforma-cadastro");
 			this.pages.add("midia/midia-lista");
+			this.pages.add("midia/midia-editar");
 			this.pages.add("midia/midia-cadastro");
 		}catch(Exception e){
 			System.out.println("Erro ao setar paginas");

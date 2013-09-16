@@ -1,6 +1,5 @@
 package model.beans;
 
-import java.sql.Date;
 import java.util.Calendar;
 
 public class GameBean {
@@ -11,8 +10,11 @@ public class GameBean {
 	private String game_descricao;
 	private String game_capa;
 	private Integer gen_id;
+	private String gen_nome;
 	private Integer pla_id;
+	private String pla_nome;
 	private Integer mid_id;	
+	private String mid_nome;
 	
 	
 	public Integer getGame_id() {
@@ -62,6 +64,24 @@ public class GameBean {
 	}
 	public void setMid_id(Integer mid_id) {
 		this.mid_id = mid_id;
+	}
+	public String getGen_nome() {
+		return gen_nome;
+	}
+	public void setGen_nome(String gen_nome) {
+		this.gen_nome = gen_nome;
+	}
+	public String getPla_nome() {
+		return pla_nome;
+	}
+	public void setPla_nome(String pla_nome) {
+		this.pla_nome = pla_nome;
+	}
+	public String getMid_nome() {
+		return mid_nome;
+	}
+	public void setMid_nome(String mid_nome) {
+		this.mid_nome = mid_nome;
 	}
 	
 }

@@ -32,9 +32,9 @@ public class GeneroController {
 	
     public void save(){
 		
-		String gen_id = request.getParameter("id");
-		generoBean.setGen_nome(request.getParameter("nome"));
-		generoBean.setGen_descricao(request.getParameter("descricao"));
+		String gen_id = request.getParameter("gen_id");
+		generoBean.setGen_nome(request.getParameter("gen_nome"));
+		generoBean.setGen_descricao(request.getParameter("gen_descricao"));
 		
 		if ((gen_id == null)||(gen_id.trim().length() == 0)){
 			generoModel.insert(generoBean);
@@ -44,12 +44,12 @@ public class GeneroController {
 			generoModel.altera(generoBean);
 		}
 		
-		System.out.println(request.getParameter("nome"));
+		System.out.println(request.getParameter("gen_nome"));
 	}
 	
     public void delete(){
 
-		String gen_id = request.getParameter("id");
+		String gen_id = request.getParameter("gen_id");
 		generoBean.setGen_id(Integer.parseInt(gen_id));
 		generoModel.remove(generoBean);
 	}

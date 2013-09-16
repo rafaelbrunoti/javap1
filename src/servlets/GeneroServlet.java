@@ -21,15 +21,13 @@ public class GeneroServlet extends HttpServlet {
        
 	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PrintWriter out = response.getWriter();
-		
 		GeneroController controller = new GeneroController();
 		controller.request = request;
 		controller.response = response;
 		
-		String generoId = request.getParameter("id");
-		String generoNome = request.getParameter("nome");
-		String generoDescricao = request.getParameter("descricao");
+		String generoId = request.getParameter("gen_id");
+		String generoNome = request.getParameter("gen_nome");
+		String generoDescricao = request.getParameter("gen_descricao");
 		
 		//Criação do objeto model
 		GeneroBean bean = new GeneroBean();
