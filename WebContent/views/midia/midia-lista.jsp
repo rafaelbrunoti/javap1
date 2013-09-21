@@ -17,8 +17,8 @@
 				<tr>
 					<td>${listas.getMid_id()}</td>
 					<td>${listas.getMid_nome()}</td>
-					<td><a class="btn btn btn-mini btn-primary " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
-					<td><a class="btn btn btn-mini btn-danger " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign icon-white"/></a></td>
+					<td><a class="btn btn btn-mini btn-primary " href="?view=midia/midia-editar&mid_id=${listas.getMid_id()}" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
+					<td><a class="btn btn btn-mini btn-danger " href="/javap1/MidiaServlet?mid_id=${listas.getMid_id()}&acao=delete" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign icon-white"/></a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

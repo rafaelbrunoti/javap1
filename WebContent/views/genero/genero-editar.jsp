@@ -5,7 +5,7 @@
 <% GeneroBean generoBean = generoController.generoPorId(); %>
 
 <div class="well span4">
-	<div align="center"><fieldset>Cadastro Gêneros</fieldset></div>
+	<div align="center"><fieldset>Edição Gêneros</fieldset></div>
 	<br>
 	<form action="/javap1/GeneroServlet" method="get">
 		<div class="control-group">

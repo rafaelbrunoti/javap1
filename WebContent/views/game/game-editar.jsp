@@ -21,25 +21,7 @@
     	border-style:solid;
     	border-radius: 10px;
 	}
-  </style>
-  
- <!-- Carrega imagem -->
- <script>
- 	function readURL(input) {
- 		if (input.files && input.files[0]) {
- 			var reader = new FileReader();
-
- 			reader.onload = function (e) {
- 				$('#blah')
- 				.attr('src', e.target.result)
- 				.width(220)
- 				.height(150);
- 			};
-
- 			reader.readAsDataURL(input.files[0]);
- 		}
- 	}
-</script>					
+  </style>					
 
 <div class="well span7">
 	<div style="font-size:16px; font-weight: bold; color: #27408B; text-align: center;">

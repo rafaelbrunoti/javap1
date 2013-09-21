@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.beans.GeneroBean;
 import model.beans.MidiaBean;
 import model.connection.ODBCConnection;
 
@@ -42,12 +43,15 @@ public class MidiaModel {
 		return midiaModel;
 		
 	}
-	public List<MidiaBean>  select(String sql){
+	
+	public List<MidiaBean>  select(MidiaBean midiaBean){
         try{
             List<MidiaBean> midiaLista = new ArrayList<MidiaBean>();
+            String sql = "select * from midia where 1=1 ";
             
-            sql = "select * from midia";
-            
+            if (midiaBean.getMid_id() != null ){
+            	sql += "and mid_id = "+midiaBean.getMid_id();
+            }
             
             
             stmt  = odbcConnection.connect().prepareStatement(sql);
@@ -56,12 +60,12 @@ public class MidiaModel {
             
             while (rs.next()){
             	
-            	MidiaBean midiaBean = new MidiaBean();
+            	MidiaBean midia = new MidiaBean();
 
-            	midiaBean.setMid_id(rs.getInt("mid_id"));
-            	midiaBean.setMid_nome(rs.getString("mid_nome"));
+            	midia.setMid_id(rs.getInt("mid_id"));
+            	midia.setMid_nome(rs.getString("mid_nome"));
                 
-                midiaLista.add(midiaBean);
+                midiaLista.add(midia);
                 
             }
             rs.close();
@@ -74,10 +78,11 @@ public class MidiaModel {
 	
 	public void altera(MidiaBean midiaBean){
 	      
-        String sql = "update midia set mid_nome=? where mid_id=?";
+        String sql = "UPDATE midia SET mid_nome=? WHERE mid_id=?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setString(1, midiaBean.getMid_nome());
+            stmt.setInt(2, midiaBean.getMid_id());
             stmt.execute();
             stmt.close();
             

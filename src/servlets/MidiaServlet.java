@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.beans.GeneroBean;
 import model.beans.MidiaBean;
 import controllers.MidiaController;
 
@@ -26,13 +27,27 @@ public class MidiaServlet extends HttpServlet {
 		controller.request = request;
 		controller.response = response;
 		
-		String midiaNome = request.getParameter("nome");
+		String midiaId	= request.getParameter("mid_id");
+		String midiaNome = request.getParameter("mid_nome");
 		
 		//Criação do objeto model
-		MidiaBean bean = new MidiaBean();
-		bean.setMid_nome(midiaNome);
-		controller.save();
-		
+				MidiaBean bean = new MidiaBean();
+				
+				//If para verificar se é cadastro ou alteração
+				if ((midiaId.trim().length() != 0)){
+		     	   bean.setMid_id(Integer.parseInt(midiaId));
+				}
+				
+				bean.setMid_nome(midiaNome);
+
+				
+				if(request.getParameter("acao") == null){
+					controller.save();
+				}else
+				{
+					controller.delete();
+				}
+				
 		response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista");	
 		
 	}
