@@ -25,6 +25,7 @@
 	</table>
 </div>
 <div class="span10">
+	<a class="btn btn-primary" href="?view=midia/midia-cadastro">Novo</a>
 	<a class="btn btn-success" href="index.jsp">Voltar</a>
 </div>
 
