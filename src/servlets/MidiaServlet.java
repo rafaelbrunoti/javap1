@@ -47,8 +47,9 @@ public class MidiaServlet extends HttpServlet {
 				{
 					controller.delete();
 				}
-				
-		response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista");	
+			
+				out.println("Midia cadastrada com sucesso!");
+		//response.sendRedirect(request.getContextPath() + "/views/?view=midia/midia-lista");	
 		
 	}
 	
