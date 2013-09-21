@@ -41,21 +41,21 @@ public class GameController {
 		
 		String game_id = request.getParameter("game_id");
    
-    	/*/Convertendo data em String
+    	//Convertendo data em String
     	String dataEmTexto = request.getParameter("game_data");
 		Calendar dataLancamento = null;
     	
     	try {
     		Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
     		dataLancamento = Calendar.getInstance();
-    		dataLancamento.setTime(Time);
+    		dataLancamento.setTime(data);
     	} catch (ParseException e) {
     		System.out.println("Erro de conversão de data!");
     		return; //Para a execução do Metodo
     	}
-    	//Fim da conversao*/
+    	//Fim da conversao
     	
-    	gameBean.setGame_data(Calendar.getInstance());
+    	gameBean.setGame_data(dataLancamento);
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
