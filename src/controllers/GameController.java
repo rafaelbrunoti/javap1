@@ -1,5 +1,6 @@
 package controllers;
 
+import java.sql.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -39,23 +40,23 @@ public class GameController {
     
 	public void save(){
 		
+		String dataEmTexto = request.getParameter("game_data");
+    	Calendar game_data = null;
+    	
+		String[] split = dataEmTexto.split("/");
+		int year = Integer.parseInt(split[2]);
+		int month = Integer.parseInt(split[1]);
+		int date = Integer.parseInt(split[0]);
+		
+		System.out.print(year +"/"+ month +"/"+ date);
+		
+		game_data = Calendar.getInstance();
+		game_data.set(year, month, date);
+		
 		String game_id = request.getParameter("game_id");
    
     	//Convertendo data em String
-    	String dataEmTexto = request.getParameter("game_data");
-		Calendar dataLancamento = null;
-    	
-    	try {
-    		Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-    		dataLancamento = Calendar.getInstance();
-    		dataLancamento.setTime(data);
-    	} catch (ParseException e) {
-    		System.out.println("Erro de conversão de data!");
-    		return; //Para a execução do Metodo
-    	}
-    	//Fim da conversao
-    	
-    	gameBean.setGame_data(dataLancamento);
+    	gameBean.setGame_data(game_data);
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
