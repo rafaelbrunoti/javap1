@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.beans.GeneroBean;
 import model.beans.PlataformaBean;
 import controllers.PlataformaController;
 
@@ -19,20 +20,31 @@ public class PlataformaServlet extends HttpServlet {
        
 	protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PrintWriter out = response.getWriter();
-		
 		PlataformaController controller = new PlataformaController();
 		controller.request = request;
 		controller.response = response;
 		
-		String plataformaNome = request.getParameter("nome");
-		String plataformaDescricao = request.getParameter("descricao");
+		String plataformaId	 = request.getParameter("pla_id");
+		String plataformaNome = request.getParameter("pla_nome");
+		String plataformaDescricao = request.getParameter("pla_descricao");
 		
 		//Criação do objeto model
 		PlataformaBean bean = new PlataformaBean();
+				
+		//If para verificar se é cadastro ou alteração
+		if ((plataformaId.trim().length() != 0)){
+		    bean.setPla_id(Integer.parseInt(plataformaId));
+		}
+				
 		bean.setPla_nome(plataformaNome);
 		bean.setPla_descricao(plataformaDescricao);
-		controller.save();
+				
+		if(request.getParameter("acao") == null){
+			controller.save();
+		}else
+		{
+			controller.delete();
+		}
 		
 		response.sendRedirect(request.getContextPath() + "/views/?view=plataforma/plataforma-lista");		
 		

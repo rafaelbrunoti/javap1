@@ -20,13 +20,14 @@
 					<td>${listas.getPla_id()}</td>
 					<td>${listas.getPla_nome()}</td>
 					<td>${listas.getPla_descricao()}</td>
-					<td><a class="btn btn btn-mini btn-primary " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
-					<td><a class="btn btn btn-mini btn-danger " href="?views=game/game-cadastro" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign icon-white"></i></a></td>
+					<td><a class="btn btn btn-mini btn-primary " href="?view=plataforma/plataforma-editar&pla_id=${listas.getPla_id()}" rel="tooltip" data-placement="top" title="Editar Registro"><i class="icon-edit icon-white"></i></a></td>
+					<td><a class="btn btn btn-mini btn-danger " href="/javap1/PlataformaServlet?pla_id=${listas.getPla_id()}&acao=delete" rel="tooltip" data-placement="top" title="Excluir Registro"><i class="icon-remove-sign icon-white"/></a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 </div>
 <div class="span10">
+    <a class="btn btn-primary" href="?view=plataforma/plataforma-cadastro">Novo</a>
 	<a class="btn btn-success" href="index.jsp">Voltar</a>
 </div>

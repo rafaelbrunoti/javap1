@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.beans.MidiaBean;
 import model.beans.PlataformaBean;
 import model.connection.ODBCConnection;
 
@@ -23,7 +24,7 @@ public class PlataformaModel {
 	
 	public PlataformaModel insert(PlataformaBean plataformaBean){
 		
-		sql = "insert into plataforma (pla_nome, pla_descricao) VALUES ("
+		sql = "INSERT INTO plataforma (pla_nome, pla_descricao) VALUES ("
 				     +"'"+plataformaBean.getPla_nome()+"',"
 				     +"'"+plataformaBean.getPla_descricao()+"')";
 		
@@ -43,12 +44,15 @@ public class PlataformaModel {
 		return plataformaModel;
 		
 	}
-	public List<PlataformaBean>  select(String sql){
+	
+	public List<PlataformaBean>  select(PlataformaBean plataformaBean){
         try{
             List<PlataformaBean> plataformaLista = new ArrayList<PlataformaBean>();
+            String sql = "SELECT * FROM plataforma WHERE 1=1 ";
             
-            sql = "select * from plataforma";
-            
+            if (plataformaBean.getPla_id() != null ){
+            	sql += "AND pla_id = "+plataformaBean.getPla_id();
+            }
             
             
             stmt  = odbcConnection.connect().prepareStatement(sql);
@@ -57,13 +61,13 @@ public class PlataformaModel {
             
             while (rs.next()){
             	
-            	PlataformaBean plataformaBean = new PlataformaBean();
+            	PlataformaBean plataforma = new PlataformaBean();
 
-            	plataformaBean.setPla_id(rs.getInt("pla_id"));
-            	plataformaBean.setPla_nome(rs.getString("pla_nome"));
-            	plataformaBean.setPla_descricao(rs.getString("pla_descricao"));
+            	plataforma.setPla_id(rs.getInt("pla_id"));
+            	plataforma.setPla_nome(rs.getString("pla_nome"));
+            	plataforma.setPla_descricao(rs.getString("pla_descricao"));
                 
-                plataformaLista.add(plataformaBean);
+            	plataformaLista.add(plataforma);
                 
             }
             rs.close();
@@ -76,11 +80,12 @@ public class PlataformaModel {
 	
 	public void altera(PlataformaBean plataformaBean){
 	      
-        String sql = "update plataforma set pla_nome=?, pla_descricao=? where pla_id=?";
+        String sql = "UPDATE plataforma SET pla_nome=?, pla_descricao=? WHERE pla_id=?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setString(1, plataformaBean.getPla_nome());
             stmt.setString(2, plataformaBean.getPla_descricao());
+            stmt.setInt(3, plataformaBean.getPla_id());
             stmt.execute();
             stmt.close();
             
@@ -90,7 +95,7 @@ public class PlataformaModel {
     }
 	
 	public void remove(PlataformaBean plataformaBean){
-        String sql = "delete from plataforma where pla_id =?";
+        String sql = "DELETE FROM plataforma WHERE pla_id =?";
         try {
             PreparedStatement stmt = odbcConnection.connect().prepareStatement(sql);
             stmt.setInt(1, plataformaBean.getPla_id());

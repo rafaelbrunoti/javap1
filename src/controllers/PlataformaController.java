@@ -12,24 +12,59 @@ public class PlataformaController {
 	public HttpServletRequest request;
 	public HttpServletResponse response;
 	public PlataformaModel plataformaModel;
+	public PlataformaBean plataformaBean;
+	
+	private Integer pla_id;
+	
+	public Integer getPla_id() {
+		return pla_id;
+	}
+	
+	public void setPla_id(Integer pla_id) {
+		this.pla_id = pla_id;
+	}
 	
 	public PlataformaController(){
 		plataformaModel = new PlataformaModel();
+		plataformaBean = new PlataformaBean();
 	}
+	
 	
     public void save(){
 		
-		PlataformaModel plataformaModel = new PlataformaModel();
-		PlataformaBean plataformaBean = new PlataformaBean();
+		String pla_id = request.getParameter("pla_id");
+		plataformaBean.setPla_nome(request.getParameter("pla_nome"));
+		plataformaBean.setPla_descricao(request.getParameter("pla_descricao"));
 		
-		plataformaBean.setPla_nome(request.getParameter("nome"));
-		plataformaBean.setPla_descricao(request.getParameter("descricao"));
-				
-		plataformaModel.insert(plataformaBean);
-		System.out.println(request.getParameter("game_nome"));
+		if ((pla_id == null)||(pla_id.trim().length() == 0)){
+			plataformaModel.insert(plataformaBean);
+		
+		}else{
+			plataformaBean.setPla_id(Integer.parseInt(pla_id));
+			plataformaModel.altera(plataformaBean);
+		}
+		
+		System.out.println(request.getParameter("pla_nome"));
 	}
 	
-	public List<PlataformaBean> plataformaLista(){
-		return plataformaModel.select("");
+    public void delete(){
+
+		String pla_id = request.getParameter("pla_id");
+		plataformaBean.setPla_id(Integer.parseInt(pla_id));
+		plataformaModel.remove(plataformaBean);
 	}
+    
+    
+	public List<PlataformaBean> plataformaLista(){		
+		return plataformaModel.select(plataformaBean);
+	}
+	
+	public PlataformaBean plataformaPorId(){
+		if (getPla_id()!= null){
+			plataformaBean.setPla_id(getPla_id());
+			return plataformaModel.select(plataformaBean).get(0);
+		}else
+			return plataformaBean;
+	}
+
 }

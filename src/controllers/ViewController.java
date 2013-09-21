@@ -44,8 +44,8 @@ public class ViewController {
 			this.pages.add("genero/genero-lista");
 			this.pages.add("genero/genero-editar");
 			this.pages.add("genero/genero-cadastro");
-			this.pages.add("genero/genero-editar");
 			this.pages.add("plataforma/plataforma-lista");
+			this.pages.add("plataforma/plataforma-editar");
 			this.pages.add("plataforma/plataforma-cadastro");
 			this.pages.add("midia/midia-lista");
 			this.pages.add("midia/midia-editar");
