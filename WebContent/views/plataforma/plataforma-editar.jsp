@@ -1,5 +1,7 @@
 <%@page import="model.beans.PlataformaBean"%>
 <jsp:useBean class="controllers.PlataformaController" id="plataformaController"></jsp:useBean>
+<% int pla_id = Integer.parseInt(request.getParameter("pla_id"));  %>
+<jsp:setProperty property="pla_id" name="plataformaController" value="<%=pla_id%>"/>
 <% PlataformaBean plataformaBean = plataformaController.plataformaPorId(); %>
 
 <div class="well span4">

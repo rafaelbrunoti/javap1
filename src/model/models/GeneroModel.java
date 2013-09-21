@@ -23,7 +23,7 @@ public class GeneroModel {
 	
 	public GeneroModel insert(GeneroBean generoBean){
 		
-		sql = "insert into genero (gen_nome, gen_descricao) VALUES ("
+		sql = "INSERT INTO genero (gen_nome, gen_descricao) VALUES ("
 				     +"'"+generoBean.getGen_nome()+"',"
 				     +"'"+generoBean.getGen_descricao()+"')";
 		
@@ -47,10 +47,10 @@ public class GeneroModel {
 	public List<GeneroBean>  select(GeneroBean generoBean){
         try{
             List<GeneroBean> generoLista = new ArrayList<GeneroBean>();
-            String sql = "select * from genero where 1=1 ";
+            String sql = "SELECT * FROM genero WHERE 1=1 ";
             
             if (generoBean.getGen_id() != null ){
-            	sql += "and gen_id = "+generoBean.getGen_id();
+            	sql += "AND gen_id = "+generoBean.getGen_id();
             }
             
             
