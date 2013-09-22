@@ -1,11 +1,12 @@
+<script type="text/javascript" src="../assets/js/midias.js"></script>
 <%@page import="model.beans.MidiaBean"%>
 <jsp:useBean class="controllers.MidiaController" id="midiaController"></jsp:useBean>
 <% MidiaBean midiaBean = midiaController.midiaPorId(); %>
-
+<div id="mensagem">Mensagem: </div>
 <div class="well span4">
 	<div align="center"><fieldset>Cadastro Midias</fieldset></div>
 	<br>
-	<form action="/javap1/MidiaServlet" method="get">
+	<form id="form-cad-midia" action="/javap1/MidiaServlet" method="get">
 		<div class="control-group">
 			<label class="control-label">Código:</label>
 			<div class="controls">
