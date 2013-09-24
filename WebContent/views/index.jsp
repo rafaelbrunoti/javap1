@@ -8,7 +8,7 @@
 	<title>Controle de Games</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/icons-desktop.css"/>
-
+	
 	<script src="../assets/js/jquery-1.7.1.min.js"></script>
 	<script src="../assets/js/bootstrap.js"></script>
 	<script src="../assets/js/utils.js"></script>

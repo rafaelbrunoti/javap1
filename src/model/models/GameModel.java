@@ -9,7 +9,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import model.beans.GameBean;
-import model.beans.GeneroBean;
 import model.connection.ODBCConnection;
 
 public class GameModel {
@@ -25,19 +24,29 @@ public class GameModel {
 	
 	public GameModel insert(GameBean gameBean){
 		
-		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES ("
-				     +"'"+gameBean.getGame_nome()+"',"
-				     +"'"+gameBean.getGame_data().getTimeInMillis()+"',"
-				     +"'"+gameBean.getGame_descricao()+"',"
-				     +"'"+gameBean.getGame_capa()+"',"
-				     +"'"+gameBean.getGen_id()+"',"
-				     +"'"+gameBean.getPla_id()+"',"
-				     +"'"+gameBean.getMid_id()+"')";
+		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) " +
+				"VALUES (?,?,?,?,?,?,?)";
+//				     +"'"+gameBean.getGame_nome()+"',"
+//				     +"'"+gameBean.getGame_data().getTimeInMillis()+"',"
+//				     +"'"+gameBean.getGame_descricao()+"',"
+//				     +"'"+gameBean.getGame_capa()+"',"
+//				     +"'"+gameBean.getGen_id()+"',"
+//				     +"'"+gameBean.getPla_id()+"',"
+//				     +"'"+gameBean.getMid_id()+"')";
+//		
 		
-		
-		try{		
+		try{	
 			
 			stmt = odbcConnection.connect().prepareStatement(sql);
+			
+			stmt.setString(1, gameBean.getGame_nome());
+			stmt.setDate(2, new Date(gameBean.getGame_data().getTimeInMillis()));
+			stmt.setString(3, gameBean.getGame_descricao());
+			stmt.setString(4, gameBean.getGame_capa());
+			stmt.setInt(5, gameBean.getGen_id());
+			stmt.setInt(6, gameBean.getPla_id());
+			stmt.setInt(7, gameBean.getMid_id());
+			
 			stmt.execute();
 			stmt.close();
 			
