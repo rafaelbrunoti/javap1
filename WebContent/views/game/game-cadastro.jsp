@@ -6,9 +6,6 @@
 <% GameBean gameBean = gameController.gamePorId(); %>
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="../../assets/css/bootstrap.css">
-<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../assets/css/style.css" />
 
   <style type="text/css">
   	.capa {
@@ -48,7 +45,7 @@
 							</div>
 							<label class="control-label">Data:</label>
 							<div class="controls">
-								<input type="text" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
+								<input type="text"  name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
 									placeholder="Data" />
 							</div>
 							<label class="control-label">Genero:</label>

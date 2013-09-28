@@ -38,25 +38,17 @@ public class GameController {
 		gameBean = new GameBean();
 	}
     
-	public void save(){
-		
-		String dataEmTexto = request.getParameter("game_data");
-    	Calendar game_data = null;
-    	
-		String[] split = dataEmTexto.split("/");
-		int year = Integer.parseInt(split[2]);
-		int month = Integer.parseInt(split[1]);
-		int date = Integer.parseInt(split[0]);
-		
-		System.out.print(year +"/"+ month +"/"+ date);
-		
-		game_data = Calendar.getInstance();
-		game_data.set(year, month, date);
+	public void save() throws ParseException{
 		
 		String game_id = request.getParameter("game_id");
-   
-    	//Convertendo data em String
-    	gameBean.setGame_data(game_data);
+		 
+		String dataEmTexto = request.getParameter("game_data");
+		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		Calendar dataLancamento = Calendar.getInstance();
+		dataLancamento.setTime(date);
+		
+		
+    	gameBean.setGame_data(dataLancamento);
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));

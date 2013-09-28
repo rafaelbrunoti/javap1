@@ -8,8 +8,10 @@
 	<title>Controle de Games</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/icons-desktop.css"/>
+	<link rel="stylesheet" type="text/css" href="../assets/css/datepicker.css"/>
 
 	<script src="../assets/js/jquery-1.7.1.min.js"></script>
+	<script src="../assets/js/jquery-ui-1.8.2.custom.min.js"></script>
 	<script src="../assets/js/bootstrap.js"></script>
 	<script src="../assets/js/utils.js"></script>
 </head>
