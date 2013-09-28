@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import model.beans.GameBean;
+import model.beans.GeneroBean;
 import model.connection.ODBCConnection;
 
 public class GameModel {
@@ -24,18 +25,9 @@ public class GameModel {
 	
 	public GameModel insert(GameBean gameBean){
 		
-		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) " +
-				"VALUES (?,?,?,?,?,?,?)";
-//				     +"'"+gameBean.getGame_nome()+"',"
-//				     +"'"+gameBean.getGame_data().getTimeInMillis()+"',"
-//				     +"'"+gameBean.getGame_descricao()+"',"
-//				     +"'"+gameBean.getGame_capa()+"',"
-//				     +"'"+gameBean.getGen_id()+"',"
-//				     +"'"+gameBean.getPla_id()+"',"
-//				     +"'"+gameBean.getMid_id()+"')";
-//		
+		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES (?,?,?,?,?,?,?)";		
 		
-		try{	
+		try{		
 			
 			stmt = odbcConnection.connect().prepareStatement(sql);
 			
@@ -46,7 +38,7 @@ public class GameModel {
 			stmt.setInt(5, gameBean.getGen_id());
 			stmt.setInt(6, gameBean.getPla_id());
 			stmt.setInt(7, gameBean.getMid_id());
-			
+
 			stmt.execute();
 			stmt.close();
 			

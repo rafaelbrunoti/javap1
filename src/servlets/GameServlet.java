@@ -67,7 +67,7 @@ public class GameServlet extends HttpServlet {
   
     } 
     
-    protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void execute (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
     	
     	PrintWriter out = response.getWriter();  
     	
@@ -87,12 +87,12 @@ public class GameServlet extends HttpServlet {
                 	System.out.println("Nome do campo = " + item.getFieldName() +  
                             ", Value = " + item.getString());  
                 } else {  
-                   out.println("Arquivo = " + item.getName() + "<br/>"  
+                   System.out.println("Arquivo = " + item.getName() + "<br/>"  
                             + "Mime Type = " + item.getContentType() + "<br/>"  
                             + "Tamanho= " + item.getSize() / 1024 + " KB");  
                     File file = new File(destinationDir, item.getName());  
                     item.write(file);  
-                    System.out.println("<br/>Arquivo gravado em: " + file.getPath());  
+                    System.out.println("Arquivo gravado em: " + file.getPath());  
                 }  
                 out.close();  
             }  
@@ -120,11 +120,21 @@ public class GameServlet extends HttpServlet {
     	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.execute(request, response);
+		try {
+			this.execute(request, response);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.execute(request, response);
+		try {
+			this.execute(request, response);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

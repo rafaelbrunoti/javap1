@@ -1,7 +1,5 @@
 package controllers;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.tomcat.jni.Time;
 
 import model.beans.GameBean;
+import model.beans.GeneroBean;
 import model.models.GameModel;
 
 public class GameController {
@@ -39,39 +38,17 @@ public class GameController {
 		gameBean = new GameBean();
 	}
     
-	public void save() throws IOException{
-		
-		PrintWriter out = response.getWriter();
-		
-		String dataEmTexto = request.getParameter("game_data");
-    	Calendar game_data = null;
-    	
-//		String[] split = dataEmTexto.split("/");
-//		int year = Integer.parseInt(split[2]);
-//		int month = Integer.parseInt(split[1]);
-//		int date = Integer.parseInt(split[0]);
-//		
-//		System.out.print(year +"/"+ month +"/"+ date);
-//		
-//		game_data = Calendar.getInstance();
-//		game_data.set(year, month, date);
-    	
-    	try {
-			Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-			game_data = Calendar.getInstance();
-			game_data.setTime(data);
-			
-			System.out.println("A inserção passou por aqui !");
-			
-		} catch (ParseException e) {
-			out.println("Erro de conversão de data!");
-			return; //Para a execução do Metodo
-		}
+	public void save() throws ParseException{
 		
 		String game_id = request.getParameter("game_id");
-   
-    	//Convertendo data em String
-    	gameBean.setGame_data(game_data);
+		 
+		String dataEmTexto = request.getParameter("game_data");
+		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		Calendar dataLancamento = Calendar.getInstance();
+		dataLancamento.setTime(date);
+		
+		
+    	gameBean.setGame_data(dataLancamento);
     	gameBean.setGame_nome(request.getParameter("game_nome"));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
@@ -88,7 +65,6 @@ public class GameController {
 		}
 		
 		System.out.println(request.getParameter("game_nome"));
-		System.out.println(request.getParameter("game_data"));
 	}
 	
 		
