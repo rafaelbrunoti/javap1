@@ -45,7 +45,7 @@
 							</div>
 							<label class="control-label">Data:</label>
 							<div class="controls">
-								<input type="text"  name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
+								<input type="text" id="calendario" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
 									placeholder="Data" />
 							</div>
 							<label class="control-label">Genero:</label>
