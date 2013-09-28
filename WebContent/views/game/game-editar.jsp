@@ -68,7 +68,7 @@
 									<td style="border solid: 0px;">
 										<label class="control-label">Capa:</label>
 										<div class="capa">
-    									 	<img id="blah" src="#" alt="capa" class="img-rounded"/>
+    									 	<img id="blah" src="../capas/<%=(gameBean.getGame_capa() == null) ? "" : gameBean.getGame_capa() %>" alt="capa" class="img-rounded"/>
 										</div>
 									  
 									    <input type='file' name="game_capa" value="<%=(gameBean.getGame_capa() == null) ? "" : gameBean.getGame_capa() %>" onchange="readURL(this);" />
@@ -115,8 +115,8 @@
 						<td style="vertical-align: top; padding: 10px; border: solid 0px; height: 100px;">
 							<div class="controls" style="width:478px;  height:100px; border: solid 0px;">
 								<label class="control-label">Descrição:</label>
-								<textarea name="game_descricao" value="<%=(gameBean.getGame_descricao() == null) ? "" : gameBean.getGame_descricao() %>" 
-								          rows="3" cols="5" style="width:460px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"></textarea>
+								<textarea name="game_descricao" " 
+								          rows="3" cols="5" style="width:460px;  height:50px; border: solid 1px #27408B;" placeholder="Descrição"><%=(gameBean.getGame_descricao() == null) ? "" : gameBean.getGame_descricao() %></textarea>
 							</div>
 						</td>
 					</tr>
