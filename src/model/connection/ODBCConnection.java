@@ -9,13 +9,13 @@ public class ODBCConnection {
 	
 	public Connection connect(){
 		try{
+			
 			Class.forName("com." + Config.driver_development + ".jdbc.Driver").newInstance();
 			
 			odbcConnection = (Connection) DriverManager.getConnection("jdbc:"
 					+ Config.driver_development +"://"
 					+ Config.host_development + "/"
 					+ Config.db_development,Config.user_development,Config.pass_development);
-			
 			
 		}catch(Exception e){
 			System.out.println(e);
