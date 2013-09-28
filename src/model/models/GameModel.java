@@ -27,7 +27,7 @@ public class GameModel {
 		
 		sql = "INSERT INTO game (game_nome, game_data, game_descricao, game_capa, gen_id, pla_id, mid_id) VALUES ("
 				     +"'"+gameBean.getGame_nome()+"',"
-				     +"'"+gameBean.getGame_data().getTimeInMillis()+"',"
+				     +"'"+gameBean.getGame_data().YEAR +"/"+gameBean.getGame_data().MONTH+"/"+gameBean.getGame_data().DATE+"',"
 				     +"'"+gameBean.getGame_descricao()+"',"
 				     +"'"+gameBean.getGame_capa()+"',"
 				     +"'"+gameBean.getGen_id()+"',"
