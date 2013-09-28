@@ -7,10 +7,7 @@
 <jsp:setProperty property="game_id" name="gameController" value="<%=game_id%>"/>
 <% GameBean gameBean = gameController.gamePorId(); %>
 
-<!DOCTYPE html>
-<link rel="stylesheet" href="../../assets/css/bootstrap.css">
-<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../assets/css/style.css" />
+<script type="text/javascript" src="../assets/js/game.js"></script>
 
   <style type="text/css">
   	.capa {
@@ -21,15 +18,13 @@
     	border-style:solid;
     	border-radius: 10px;
 	}
-  </style>					
+  </style>
 
 <div class="well span7">
 	<div style="font-size:16px; font-weight: bold; color: #27408B; text-align: center;">
-		<fieldset>Cadastro Games</fieldset>
+		<fieldset>Alteração Games</fieldset>
 	</div>
 	<br>
-	
-	
         <form action="/javap1/GameServlet" enctype="multipart/form-data" method="get">  
  		<div class="control-group" style="border: solid 0px red;">
 			<div style="border: solid 0px red;">
@@ -53,15 +48,16 @@
 									placeholder="Data" />
 							</div>
 							<label class="control-label">Genero:</label>
-							<select name="gen_id">
+							<select id="gen_id" name="gen_id">
 								<jsp:useBean id="listaGenero" class="controllers.GeneroController"></jsp:useBean>
-								<option>Selecione...</option>
+								<option>Seleciones...</option>
 								<c:forEach var="listas" items="${listaGenero.generoLista()}">
 									<option value="${listas.getGen_id()}">
-										${listas.getGen_nome()}
-									</option>							
+											${listas.getGen_nome()}
+									</option>
 								</c:forEach>
 							</select>
+							<input type="hidden" id="selectedListaGenero" value="<%=gameBean.getGen_id()%>">
 							<br>	
 						</td>
 						
@@ -84,7 +80,7 @@
 									<td>
 										<div>
 											<label class="control-label">Midia:</label>
-											<select name="mid_id">
+											<select id="mid_id" name="mid_id">
 												<jsp:useBean id="listaMidia" class="controllers.MidiaController"></jsp:useBean>
 												<option>Selecione...</option>
 												<c:forEach var="listas" items="${listaMidia.midiaLista()}">
@@ -93,10 +89,11 @@
 													</option>							
 												</c:forEach>
 											</select>
+											<input type="hidden" id="selectedMidia" value="<%=gameBean.getMid_id()%>">
 										</div>
 										<div>
 											<label class="control-label">Plataforma:</label>
-											<select name="pla_id">
+											<select id="pla_id" name="pla_id">
 												<jsp:useBean id="listaPlataforma" class="controllers.PlataformaController"></jsp:useBean>
 												<option>Selecione...</option>
 												<c:forEach var="listas" items="${listaPlataforma.plataformaLista()}">
@@ -105,6 +102,7 @@
 													</option>							
 												</c:forEach>
 											</select>
+											<input type="hidden" id="selectedPlataforma" value="<%=gameBean.getPla_id()%>">
 										</div>	
 									</td>
 								</tr>
