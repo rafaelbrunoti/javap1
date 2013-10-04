@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$("#input-image").change(function(){
 		$("#image").html("<img src='' id='image'  class='img-rounded'>", $("#input-image").val());
 	});
+
 });
 
 function readURL(input) {
@@ -45,5 +46,6 @@ $(function(){
 	    ],
 	    nextText: 'Próximo',
 	    prevText: 'Anterior'
-	    });
-	});
+ });
+	
+});

@@ -22,7 +22,7 @@ public class GameController {
 	public HttpServletResponse response;
 	public GameModel gameModel = null;
 	public GameBean gameBean = null;
-	
+	Calendar dataGame = null;
 	private Integer game_id;
 	
 	public Integer getGame_id() {
@@ -41,15 +41,16 @@ public class GameController {
 	public void save() throws ParseException{
 		
 		String game_id = request.getParameter("game_id");
-		 
+		
 		String dataEmTexto = request.getParameter("game_data");
 		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-		Calendar dataLancamento = Calendar.getInstance();
-		dataLancamento.setTime(date);
+		dataGame = Calendar.getInstance();
+		dataGame.setTime(date);
 		
 		
-    	gameBean.setGame_data(dataLancamento);
+		
     	gameBean.setGame_nome(request.getParameter("game_nome"));
+    	gameBean.setGame_data(dataGame);
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
     	gameBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
+<%@ taglib tagdir="/WEB-INF/tags" prefix="teg" %>
 
 <%@page import="model.beans.GameBean"%>
 <jsp:useBean class="controllers.GameController" id="gameController"></jsp:useBean>
@@ -17,8 +18,7 @@
     	border-radius: 10px;
 	}
   </style>
- 				
-
+  
 <div class="well span7">
 	<div style="font-size:16px; font-weight: bold; color: #27408B; text-align: center;">
 		<fieldset>Cadastro Games</fieldset>
@@ -45,8 +45,10 @@
 							</div>
 							<label class="control-label">Data:</label>
 							<div class="controls">
-								<input type="text" id="calendario" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
-									placeholder="Data" />
+<%-- 								<input type="text" id="calendario" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>" --%>
+<!-- 									placeholder="Data" /> -->
+									<teg:campoData id="game_data" />
+								
 							</div>
 							<label class="control-label">Genero:</label>
 							<select name="gen_id">
