@@ -9,12 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/icons-desktop.css"/>
-<!-- 	<link rel="stylesheet" type="text/css" href="../assets/css/datepicker.css"/> -->
 
 	<script src="../assets/js/jquery-1.7.1.min.js"></script>
-<!-- 	<script src="../assets/js/jquery-ui-1.8.2.custom.min.js"></script> -->
 	<script src="../assets/js/bootstrap.js"></script>
-<!-- 	<script src="../assets/js/datepicker/bootstrap-datepicker.min.js"></script> -->
+
 
 		<link type="text/css" href="../assets/css/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
 		<link type="text/css" href="../assets/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
