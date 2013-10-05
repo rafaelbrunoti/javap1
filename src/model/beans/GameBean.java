@@ -14,8 +14,7 @@ public class GameBean {
 	private Integer pla_id;
 	private String pla_nome;
 	private Integer mid_id;	
-	private String mid_nome;
-	
+	private String mid_nome;	
 	
 	public Integer getGame_id() {
 		return game_id;

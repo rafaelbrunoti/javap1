@@ -15,6 +15,7 @@ import org.apache.tomcat.jni.Time;
 import model.beans.GameBean;
 import model.beans.GeneroBean;
 import model.models.GameModel;
+import helpers.HelperDate;
 
 public class GameController {
 	
@@ -41,16 +42,11 @@ public class GameController {
 	public void save() throws ParseException{
 		
 		String game_id = request.getParameter("game_id");
-		
-		String dataEmTexto = request.getParameter("game_data");
-		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-		dataGame = Calendar.getInstance();
-		dataGame.setTime(date);
-		
-		
+		HelperDate helperDate = new HelperDate();
+
 		
     	gameBean.setGame_nome(request.getParameter("game_nome"));
-    	gameBean.setGame_data(dataGame);
+    	gameBean.setGame_data(helperDate.getStrToDate(request.getParameter("game_data")));
     	gameBean.setGame_descricao(request.getParameter("game_descricao"));
     	gameBean.setGame_capa(request.getParameter("game_capa"));
     	gameBean.setGen_id(Integer.parseInt(request.getParameter("gen_id")));

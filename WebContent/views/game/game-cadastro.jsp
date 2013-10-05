@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
-<%@ taglib tagdir="/WEB-INF/tags" prefix="teg" %>
+
 
 <%@page import="model.beans.GameBean"%>
 <jsp:useBean class="controllers.GameController" id="gameController"></jsp:useBean>

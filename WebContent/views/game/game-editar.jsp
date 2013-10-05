@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
 
-<%@page import="model.beans.GameBean"%>
+<jsp:useBean class="model.beans.GameBean" id="gameBean"></jsp:useBean>
 <jsp:useBean class="controllers.GameController" id="gameController"></jsp:useBean>
+<jsp:useBean class="helpers.HelperDate" id="helperDate"></jsp:useBean>
+
 <% int game_id = Integer.parseInt(request.getParameter("game_id"));  %>
 <jsp:setProperty property="game_id" name="gameController" value="<%=game_id%>"/>
-<% GameBean gameBean = gameController.gamePorId(); %>
+<%gameBean = gameController.gamePorId(); %>
 
 <script type="text/javascript" src="../assets/js/game.js"></script>
 
@@ -44,7 +46,7 @@
 							</div>
 							<label class="control-label">Data:</label>
 							<div class="controls">
-								<input id="calendario" type="text" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : gameBean.getGame_data() %>"
+								<input id="calendario" type="text" name="game_data" maxlength="10" value="<%=(gameBean.getGame_data() == null) ? "" : helperDate.getDateToStr(gameBean.getGame_data())  %>"
 									placeholder="Data" />
 							</div>
 							<label class="control-label">Genero:</label>
